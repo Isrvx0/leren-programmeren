@@ -18,5 +18,5 @@ totaalkosten = float (toegangsticketkosten + totaalprijsvipvr )
 print ( 'prijs VIP VR-gamesit ' , totaalprijsvipvr )
 print ( 'prijs toegang tickt ' , toegangsticketkosten )
 print ( 'totaal kosten' , totaalkosten )
+print ( 'Dit geweldige dagje-uit met' , aantalpersonen1 , 'in de speelhal met 45 minuten VR kost me maar' , totaalkosten , 'euro')
 
- 

@@ -21,3 +21,4 @@ totaalprijs = float (croissantjes + stockbordprijs) - kortingbon
 print ( 'crossantjes prijs' , croissantjes )
 print ('stockbord prijs' , stockbordprijs )
 print ('totaalprijs', totaalprijs)
+print ('de feestluch kost me bij de bakker' , totaalprijs , 'voor' , aantalcriossantjes1 , ' croissantjes en' , aantalstockborden , ' stockborden  als de kortingsbonen nog geldig zijn')
