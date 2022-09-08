@@ -7,5 +7,6 @@ aantalkomkommers = int (aantalkomkommers)
 
 mespuntjesperkomkommer = 1
 zeezoutpuntjes = aantalkomkommers * mespuntjesperkomkommer
-print ('Zeezoutpuntjes;' , zeezoutpuntjes , 'mespuntjes')
+print ('Zeezoutpuntjes' , zeezoutpuntjes , 'mespuntjes')
+
 
