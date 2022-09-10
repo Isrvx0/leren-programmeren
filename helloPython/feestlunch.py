@@ -1,24 +1,25 @@
 # feestlunch.py 
 print ('feestlunch.py')
 print ('totaal prijs van producten')
-croissantjes = input ("te berekenen prijs")
-aantalcriossantjes1 = int (croissantjes)
 
-croissantjesprijs = 0.39
+procuten = input ('wat zijn de producten')
 
-aantalcriossantjes = 0.39
-croissantjes = aantalcriossantjes * aantalcriossantjes1
+product1 = input ('hoeveel stukken criossantjes')
+aantalproduct1 = int ( product1 )
+croissantjesperstuk = 39
+croissantjesprijs = aantalproduct1 * croissantjesperstuk
 
-stockbordperstuk = 2.78
-aantalstockborden = 2
-stockbordprijs = aantalstockborden * stockbordperstuk
+product2 = input ('hoeveel stukken stockborden')
+aantalproduct2 = int ( product2 )
+stockbordperstuk = 278
+stockbordprijs = stockbordperstuk * aantalproduct2 
 
-kortingbon = 1.50
+kortingbon = 150
 
-totaalprijs = float (croissantjes + stockbordprijs) - kortingbon
+totaalprijs = int  (croissantjesprijs + stockbordprijs) - kortingbon
 
 
-print ( 'crossantjes prijs' , croissantjes )
+print ( 'crossantjes prijs' , croissantjesprijs )
 print ('stockbord prijs' , stockbordprijs )
 print ('totaalprijs', totaalprijs)
-print ('de feestluch kost me bij de bakker' , totaalprijs , 'voor' , aantalcriossantjes1 , ' croissantjes en' , aantalstockborden , ' stockborden  als de kortingsbonen nog geldig zijn')
+print ('de feestluch kost me bij de bakker' , totaalprijs , ' cent voor' , aantalproduct1 , ' croissantjes en' , aantalproduct2 , ' stockborden  als de kortingsbonen nog geldig zijn')
