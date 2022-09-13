@@ -2,7 +2,7 @@
 naam = input ("wat is je naam?")
 print ("welkom" , naam )
 print (" we gaan nu paar vragen aan je stellen. en met behulp van deze vragen ...")
-print (" bepalen we of je mag gaan solliciteren naar de functie")
+print (" bepalen we of je mag gaan solliciteren naar deze functie")
 
 dierendressuur = input (" ben je meer dan 4 jaar praktijkervaring met dieren-dressuur? ") 
 if dierendressuur == 'nee':
@@ -31,12 +31,11 @@ if man == 'nee':
         haar_snor = True
 
 lengte = int ( input ("wat is je lengte") ) 
-if lengte > 150:
+if lengte >= 150:
     goed_lengte = True
 
 gewicht = int ( input ("wat is je lichaamsgewicht? " ) )
-if gewicht > 90:
-    goed_gewicht = True
+goede_gewicht= gewicht > 90
 
 gevaarlijkPersoon = input (" heb je Overleven met gevaarlijk personeel? ")
 if gevaarlijkPersoon == 'ja': 
@@ -50,10 +49,10 @@ dieren = input ('vind je leuk om met lionleeuws te werken ?')
 antwoorden = input ("heb je alle vragen eerlijk beantwoordt? ")
 
 # controleren
-geslaagd = heeft_diploma and heeft_ervaring and heeft_rijbewijs and heeft_hoed and haar_snor and goed_lengte and goed_gewicht and goede_persoon
+geslaagd = heeft_diploma and heeft_ervaring and heeft_rijbewijs and heeft_hoed and haar_snor and goed_lengte and goede_gewicht and goede_persoon
 
 if geslaagd:
-    print ("je bent geslaagd met de test, we wachten op je voor een gesprek" , naam )
+    print ("je bent geslaagd met de test, we wachten op je voor een gesprek," , naam )
 else:
   print ("sorry, je voldaat niet aan de eisen")
 
