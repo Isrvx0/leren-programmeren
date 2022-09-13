@@ -22,10 +22,9 @@ largepizzakosten = float ( largepizza + largepizza1 )
 
 kosten = mediumpizzakosten + smallpizzakosten + largepizzakosten
 
-print ('subtotaal' , kosten )
+print ('subtotaal' ,  kosten )
 print ('bezorgkosten €2 ')
 totaalkosten =  float ( kosten + 2 ) 
 print ('totaal kosten ' , totaalkosten )
-
 print ("    Thanks for your order ! ")
 
