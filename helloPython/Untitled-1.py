@@ -12,6 +12,5 @@ try:
         print('Dat is juist')
     else:
             print('Nee dat klopt niet {}'.format(name))
-except:
-    print('Dat is geen nummer!')
-
+except ValueError:
+    print('Dat is geen nummer!, pleas try again ...')

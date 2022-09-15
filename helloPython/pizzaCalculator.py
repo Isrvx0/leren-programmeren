@@ -7,10 +7,30 @@ print ('hello,' + x )
 
 # order
 menukaart = print (" small pizza (€7) , medium pizza (€8.50) , large pizza (€12.50)" )
+
 print (" Hoeveel pizza's wil je ? ")
-smallpizza= int ( input (" aantal small pizaa's") )
-mediumpizza = int ( input (" aantal medium pizza's") )
-largepizza = int ( input ("aantal large pizza's ") )
+while True:
+    try:
+        smallpizza = input("aantal small pizaa's ")
+        smallpizza= int(smallpizza)
+        break
+    except ValueError:
+        print("No valid integer! Please try again ...")
+while True:
+    try:
+        mediumpizza = input("aantal medium pizaa's ")
+        mediumpizza= int(mediumpizza)
+        break
+    except ValueError:
+        print("No valid integer! Please try again ...")
+
+while True:
+    try:
+        largepizza = input("aantal medium pizaa's ")
+        largepizza= int(largepizza)
+        break
+    except ValueError:
+        print("No valid integer! Please try again ...")
 
 # kosten 
 smallpizza1 = 7

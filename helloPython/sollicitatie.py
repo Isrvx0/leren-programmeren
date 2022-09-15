@@ -25,6 +25,8 @@ if hoed == 'ja':
     heeft_hoed = True
 
 man = input (" ben je een man en heeft Snor breder dan 10 cm? ")
+if man =="ja":
+    raise NameError ('mannen zijn niet welkome')
 if man == 'nee':
     vrouw = input ('ben je dan een vrouw en draagt rood krulhaar langer dan 20 cm? ')
     if man or vrouw == "ja":
@@ -40,10 +42,11 @@ goede_gewicht= gewicht > 90
 gevaarlijkPersoon = input (" heb je Overleven met gevaarlijk personeel? ")
 if gevaarlijkPersoon == 'ja': 
     goede_persoon = True
-
+    if gevaarlijkPersoon == 'nee':
+        raise TypeError ('je hoeft niet de volgende vragen te maken, want je bent niet welkom')
 
 # extra vragen
-English =  input ('spreek je goed English?')
+english =  input ('spreek je goed English?')
 jas = ( input ("ben je bezit van een rode jas? "))
 dieren = input ('vind je leuk om met lionleeuws te werken ?')
 antwoorden = input ("heb je alle vragen eerlijk beantwoordt? ")

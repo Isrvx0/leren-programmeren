@@ -1,9 +1,9 @@
-x = input ('what is your name')
-print ('hello,' + x ) 
+#x = input ('what is your name')
+#print ('hello,' + x ) 
 
-print ( 10 < 11 )
+#print ( 10 < 11 )
 
-mediumpizza = int ( input (" aantal medium pizza's") )
+#ediumpizza = int ( input (" aantal medium pizza's") )
 
 kosten = 7
 totaalkosten = mediumpizza * kosten
@@ -20,9 +20,8 @@ print ( y )
 a = 33
 b = 200
 
-if b > a:
+#if b > a:
   print("b is greater than a") 
  
  # -----------------
-
-
+ 
