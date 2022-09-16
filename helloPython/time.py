@@ -8,4 +8,4 @@ minuten1 = 60
 totaaluren = float ( uren1 - uren )
 totaalminuten = int ( minuten1 - minuten )
 
-print ("dan duurt nog" , totaaluren , 'uren en' , totaalminuten , 'voordat de dag voorbij is')
+print ("dan duurt nog" , totaaluren , 'uren en' , totaalminuten , 'minuten voordat de dag voorbij is')

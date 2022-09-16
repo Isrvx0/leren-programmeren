@@ -4,6 +4,7 @@
 print (" Feeling Hungry? Order now ")
 x = input ('what is your name')
 print ('hello,' + x ) 
+errormessage = "No valid integer! Please try again ..."
 
 # order
 menukaart = print (" small pizza (€7) , medium pizza (€8.50) , large pizza (€12.50)" )
@@ -15,22 +16,22 @@ while True:
         smallpizza= int(smallpizza)
         break
     except ValueError:
-        print("No valid integer! Please try again ...")
+        print(errormessage)
 while True:
     try:
         mediumpizza = input("aantal medium pizaa's ")
         mediumpizza= int(mediumpizza)
         break
     except ValueError:
-        print("No valid integer! Please try again ...")
+        print(errormessage)
 
 while True:
     try:
-        largepizza = input("aantal medium pizaa's ")
+        largepizza = input("aantal large pizaa's ")
         largepizza= int(largepizza)
         break
     except ValueError:
-        print("No valid integer! Please try again ...")
+        print(errormessage)
 
 # kosten 
 smallpizza1 = 7
