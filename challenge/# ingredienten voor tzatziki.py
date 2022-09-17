@@ -1,4 +1,4 @@
-# ingredienten voor tzatziki
+#ingredienten voor tzatziki
 
 print ('Brekenen van de ingredienten')
 aantalkomkommers = input ('Hoeveel komkommers')
