@@ -14,7 +14,7 @@ num2 = random.randint(5,15)
 
 try: 
     number = int ( input (f' Do you know what {num1} + {num2} ,is? ') )
-    if int (number == (num1+num2) ):
+    if number == num1 + num2 : 
         print(f'that is right {naam}, you opened the door and got out of the house')
     else:
             print(f'no, that is not right {naam} , you lose the game')
@@ -26,13 +26,12 @@ print ('---- level 2 ----')
 print ('you find a crossroads, do you want to go left or right?')
 crossroads = input ('please type (L) for left and (R) for right  ')
 
-if crossroads == 'L'or 'l':
+if crossroads == 'L' or crossroads ==  'l':
     monster = input (f' thers is a monster looking at you {naam}, do you want to attack or run?  ')
-elif crossroads == 'R' or 'r': 
+elif crossroads == 'R' or crossroads ==  'r': 
             print (f'you fall into deep hole {naam}, you lose!')
             print ('GAME OVER')
             raise NameError ('you lose')
-
 else:
     print ("No valid character! please try again ...")
 if monster == 'attack':
@@ -40,7 +39,7 @@ if monster == 'attack':
     print ('GAME OVER')
     raise NameError ('you lose')
 
-elif monster == 'run':
+elif monster in ('run' , 'Run'):
     answer= print('you survive, there is a box under the tree and there is a hint inside, you can only open it by solving the puzzel')
     print (f'are you ready to solve the puzzel {naam} ?   ')
     choice = input (' type (yes) or (no)  ')
@@ -55,7 +54,7 @@ elif monster == 'run':
     character= input ('a) integer , b) float, c) complex   ')
     if character == 'a':
         print(f"you are genius {naam}! the box is open now")
-    elif character == 'b' or 'c':
+    elif character == 'b' or character == 'c':
         print (f"wrong choice {naam}! You lose!")
         print ('GAME OVER')
         raise NameError ('you lose')
@@ -77,10 +76,11 @@ if seegame == 'c':
     print (f'that is correct {naam}! you find the second hidden letter')
     print ('the hidden letter is -T-')
     print ('---- level 5 ----')
-elif seegame == 'a' or 'b':
+else:
     print (f'{naam} , thats not the right choice, you Lose!')
     print ('GAME OVER')
     raise NameError ('you lose')
+    
 print ('the next hidden letter is in the lake near to you')
 lakepuzzel = input ('if you want to stay and find it, type (yes). and if you want to leave, type (no).  ')
 if lakepuzzel == 'yes':
@@ -95,7 +95,7 @@ puzzel3= input ('choose the right choice: a) number . b) word or phrase . c deci
 if puzzel3 == 'b':
     print ('how can you be so smart! You find the 3e hidden letter! and that is -O-')
     print ('---- level 6 ----')
-elif puzzel3 == 'a' or 'c':
+elif puzzel3 == 'a' or  puzzel3 == 'c':
     print (f'thats not correct {naam} , see you next time! ')
     print ('GAME OVER')
     raise NameError ('you lose')
@@ -104,7 +104,7 @@ print ('this time you will find 2 hidden letters, but the 2 puzzels will be diff
 hint1 = input ('first puzzel, which of the following is data-type?  a) Text type . b) programming type . c)puzzel type  ') 
 if hint1 == 'a':
     print ('correct! be ready for the next puzzel!')
-elif hint1 == 'b' or 'c':
+elif hint1 == 'b' or hint1 == 'c':
     print (f"that's not the right answer {naam}. you lose!")
     print ('GAME OVER')
     raise NameError ('you lose')
@@ -113,7 +113,7 @@ python_support = input (" a) object-oriented programming . b)structured programm
 if python_support == "c":
     print (f"without a doubt, you are Einstein's grandson, GREAT JOB {naam} !")
     print ('---- level 7 ----')
-elif python_support == 'a' or 'b':
+elif python_support == 'a' or python_support == 'b':
     print (f'that was close {naam}, maybe next time')
     print ('GAME OVER')
     raise NameError ('you lose')
@@ -126,11 +126,11 @@ print ("the puzzel is: Which of the following is the correct extension of the Py
 giving_hint = input ('chose the right letter: a) .python b) .py c) .pl  ')
 if giving_hint == 'b':
     print (f"that's right {naam} , the answer for the past question is wood ")
-elif giving_hint == 'a' or 'c':
+elif giving_hint == 'a' or giving_hint == 'c':
     print ("that's not right! you lose the hint!")
 
 lastpuzzel = input ('what do you think the thing that is in the forest and it can be used to make fire?  ')
-if lastpuzzel == 'wood' or 'Wood':
+if lastpuzzel in ('wood' , 'Wood'):
     print ('that was good! you find the LAST LETTER, GOOD JOB')
     print ('---- level 8 ----')
 else:
@@ -141,7 +141,7 @@ else:
 print ("you are so close for the win! THE LAST HIDEN LETTER IS -N- ! You collect all the hidden letter and now your last job is to make from them the magic word that will help you to get out this forest")
 print("the letters are { P , T , O , Y , H , N")
 magicword= input ('what is the magic word?   ')
-if magicword == 'PYTHON' or 'python' or 'Python':
+if magicword in ('PYTHON' , 'python' , 'Python'):
     print (f'YOU ARE A REAL HERO {naam} ! YOU MADE IT AND YOU GET OUT THE FOREST! GREAT JOB ')
     print ('YOU WIN THE GAME')
 else:
