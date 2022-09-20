@@ -25,7 +25,10 @@ else:
      not False
      print(f'TBH, ik hou niet zo van {favoriteColor}...')
 #_______________
-
+name = input ('what is ur name')
+if name == 'israa':
+    raise NameError ('you are not welcome, israa')
+#________________
 # printen van character
 text = 'PYTHIN IS COOL'
 for character in text :
