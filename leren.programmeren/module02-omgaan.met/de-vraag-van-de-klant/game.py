@@ -11,16 +11,19 @@ import random
 num1 = random.randint(1,10)
 num2 = random.randint(5,15)
 
+while True:
+    try: 
+        number = int ( input (f' Do you know what {num1} + {num2} ,is? ') )
+        break 
+    except ValueError:
+        print ("thats not a number , pleaser try again!")
 
-try: 
-    number = int ( input (f' Do you know what {num1} + {num2} ,is? ') )
-    if number == num1 + num2 : 
+if number == num1 + num2 : 
         print(f'that is right {naam}, you opened the door and got out of the house')
-    else:
+else:
             print(f'no, that is not right {naam} , you lose the game')
             print ('GAME OVER')
-except:
-    print('that is not a number!')
+            raise NameError ('you lose')
 
 print ('---- level 2 ----')
 print ('you find a crossroads, do you want to go left or right?')
