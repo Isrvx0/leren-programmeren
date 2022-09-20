@@ -1,5 +1,5 @@
 naam= input ('please enter your name  ')
-welcome= print (f'hello {naam} and welcome in this forest full of puzzles.')
+welcome= print (f'hello {naam} and welcome in the forest full of puzzles.')
 intro= print("if you want to survive, you have to choose the right option and solve some puzzles.")
 ready= input ('Are you ready? (yes,no)')
 if ready == 'yes':
