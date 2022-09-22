@@ -15,3 +15,16 @@ if number == num1 + num2 :
 else:
             print('no, that is not right , you lose the game')
             print ('GAME OVER')
+#______________________________
+
+# printing slowely in Python
+import sys
+import time
+def slowprint(s):
+	for c in s + '\n':
+		sys.stdout.write(c)
+		sys.stdout.flush()
+		time.sleep(1./10)
+slowprint("this this writen slowly in my terminal")
+
+#___________________________
