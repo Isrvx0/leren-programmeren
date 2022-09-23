@@ -1,8 +1,4 @@
-nummer= int (input ('welke tafel wil je berekenen?  ') )
-for i in range (1,11):
-    print ( i * nummer )
 
-#___________ of op deze manier
 
 nummer= int (input ('welke tafel wil je berekenen?  ') )
 print ('1 x', nummer, '=', 1 * nummer)
