@@ -1,5 +1,5 @@
-# name of student:  
-# number of student: 
+# name of student: 
+# number of student:
 # purpose of program: 
 # function of program:
 # structure of program: 
