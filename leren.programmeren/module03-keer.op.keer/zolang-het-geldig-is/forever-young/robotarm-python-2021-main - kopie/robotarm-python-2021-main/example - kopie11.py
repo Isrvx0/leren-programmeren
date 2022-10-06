@@ -1,5 +1,9 @@
 from RobotArm import RobotArm
 robotArm = RobotArm('exercise 11')
+# van recht naar links
+for moveright in range (10):
+    robotArm.moveRight()
+
 for i in range (1,10):
     robotArm.grab()
     color = robotArm.scan()
@@ -8,8 +12,8 @@ for i in range (1,10):
         robotArm.grab()
         robotArm.moveRight()
         robotArm.drop()
-        robotArm.moveRight()
+        robotArm.moveLeft()
     else:
         robotArm.drop()
-        robotArm.moveRight()
+        robotArm.moveLeft()
 robotArm.wait()

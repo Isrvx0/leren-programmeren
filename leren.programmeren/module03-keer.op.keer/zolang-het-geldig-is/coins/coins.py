@@ -4,7 +4,7 @@
 # function of program:
 # structure of program: 
 
-toPay = int(float(input('Amount to pay: '))* 100) # you enter the number in euros (And here *100 to change It to cents)
+toPay = int(float(input('Amount to pay: '))* 100) # you enter the number in cents (And here *100 to change It to cents)
 paid = int(float(input('Paid amount: ')) * 100) #
 change = paid - toPay #bereken the difference between the two numbers
 if change > 0: # if change greater than 0 , the coin value is 50

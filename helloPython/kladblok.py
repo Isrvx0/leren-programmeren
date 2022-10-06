@@ -15,6 +15,19 @@
 #       totaal= nrCoinsReturned
 #       totaal1= coinValue
 
-for i in [1, 3, 5, 7, 9]:
-    x = i**2 - (i-1)*(i+1)
-    print(x, end=", ") # prints 1, 1, 1, 1, 1, 
+# for i in [1, 3, 5, 7, 9]:
+#     x = i**2 - (i-1)*(i+1)
+#     print(x, end=", ") # prints 1, 1, 1, 1, 1, 
+
+
+correct_guess=9
+guess_count=0
+guess_limit=3
+while guess_count<guess_limit:
+    guess = int(input('Guess a number: '))
+    guess_count += 1
+    if guess == correct_guess:
+        print('Congratulations! You won!')
+        break
+else:
+    print('sorry you lost')
