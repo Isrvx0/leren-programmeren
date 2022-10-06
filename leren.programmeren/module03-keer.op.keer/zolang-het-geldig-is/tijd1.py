@@ -1,4 +1,3 @@
-
 tijd1= 1
 while tijd1 <= 12:
     print (f'het is {tijd1} AM')
