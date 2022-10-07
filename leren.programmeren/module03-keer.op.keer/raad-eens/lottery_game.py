@@ -50,9 +50,9 @@ while level_num < 20 and level_num > 0:
    if guess == random_nummer:
       score +=1
       level_num += 1
-      slowprint ('CORRECT\n') 
-      slowprint (f'Your score is {score}\n')
-      slowprint (f'You guessed the number in {guess_count} tries!\n') 
+      slowprint ('CORRECT!!') 
+      slowprint (f'Your score is {score}')
+      slowprint (f'You guessed the number in {guess_count} tries!') 
       guess_count = 0
 
    play_again = input("Play again? (y/n): \n")
