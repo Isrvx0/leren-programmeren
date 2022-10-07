@@ -25,22 +25,22 @@ guess_limit = 10
 guess_count = 0 
 level_num = 1
 
-while level_num < 20 and level_num > 0:
+while level_num < 20 :
    slowprint (f"ROND {level_num}") 
    random_nummer = random.randint(1,1000)
    while guess_count < guess_limit:
       guess= int (input('Guess the secret number between 1 and 1000:  '))
       guess_count += 1
-      different= random_nummer - guess
-      if different == 50:
+      different= abs (random_nummer - guess) #absolute antwoord
+      if different <= 50:
          slowprint ('YOU ARE HOT!! \n') 
-      elif different == 20: 
+      if different <= 20: 
          slowprint ('YOU ARE SO HOTT !! \n') 
-      elif guess > random_nummer: 
+      if guess > random_nummer: 
          slowprint("Your guess is too high! Please try again! \n")
       elif guess < random_nummer:
          slowprint('your guess is too low! Please try again! \n')
-      elif guess == random_nummer:
+      if guess == random_nummer:
          break
    else:
       slowprint(f"You didn't guess the number, The number was {random_nummer}\n")
@@ -64,4 +64,3 @@ if level_num == 20 or play_again == 'n':
    slowprint (f"Your end score is {score} .")
    slowprint ("See you next time!!")
    slowprint('END OF THE GAME \n')
- 
