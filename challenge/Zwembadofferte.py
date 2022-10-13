@@ -26,3 +26,7 @@ print (f'Uitgraven:                   € {Kosten_uitgraven}')
 print (f'Afvoeren grond:              € {Kosten_afvoeren_grond} ')
 print (f'Voorrijkosten:               € {voorrijkosten} ')
 print (f'Totaal:                      € {totaal}\n')
+
+#stap 4:
+# Je kunt het weer zien in Stap 1
+
