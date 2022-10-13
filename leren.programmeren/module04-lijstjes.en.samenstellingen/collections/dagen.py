@@ -1,4 +1,3 @@
-
 weekdagen= ('maandag','dinsdag','woensdag','donderdag','vrijdag','zaterdag','zondag')
 print('Alle dagen van de week zijn:' , weekdagen[:7])
 print('De werkdagen zijn: ' , weekdagen [:5]) #tot 5 printen

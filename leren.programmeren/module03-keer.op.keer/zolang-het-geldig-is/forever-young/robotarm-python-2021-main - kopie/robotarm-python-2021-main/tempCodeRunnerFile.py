@@ -1,1 +1,1 @@
-robotArm.wait()
+for move in range (1,8):

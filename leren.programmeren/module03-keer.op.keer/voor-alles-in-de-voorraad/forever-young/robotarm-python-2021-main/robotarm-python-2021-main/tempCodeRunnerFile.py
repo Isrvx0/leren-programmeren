@@ -1,1 +1,1 @@
-robotArm.moveRight()
+for i in range(7
