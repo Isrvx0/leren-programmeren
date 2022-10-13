@@ -30,3 +30,10 @@ print (f'Totaal:                      € {totaal}\n')
 #stap 4:
 # Je kunt het weer zien in Stap 1
 
+#stap 5a:
+# 8 by 3 by 1.5
+
+bodem= lengte * breedte
+eerste_muur= breedte * diepte * 2
+tweede_muur= lengte * diepte * 2
+totaal_inhoud= bodem + eerste_muur + tweede_muur
