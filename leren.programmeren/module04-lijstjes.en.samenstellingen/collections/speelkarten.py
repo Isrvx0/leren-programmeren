@@ -1,6 +1,6 @@
 import random
 
-kleuren = ['hart','klaver','schoppen','ruitem'] #kleuren van de kaarten
+kleuren = ['hart','klaver','schoppen','ruiten'] #kleuren van de kaarten
 nummers = ["2", "3", "4", "5", "6", "7", "8", "9", "10", "B", "V", "H", "A"] #nummers van de kaarten
 joker1 = ['joker']
 joker2 = ['joker']
