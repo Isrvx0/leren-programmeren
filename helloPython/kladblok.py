@@ -1,33 +1,22 @@
+import random
 
-# toPay = int(float(input('Amount to pay: '))* 100) #
-# paid = int(float(input('Paid amount: ')) * 100) #
-# change = paid - toPay #
-# if change > 0: #
-#   coinValue = 500 #
-  
-#   while change > 0 and coinValue > 0: #
-#     nrCoins = change // coinValue #
+kleuren_lijst=  ('rood','blauw','groen','geel','bruin') #keys
+aantal_MMs= int (input ("Hoeveel M&M's er aan de zak toegevoegd moeten worden?  ")) #values
+zak_MMs= {} 
 
-#     if nrCoins > 0: #
-#       print('return maximal ', nrCoins, ' coins of ', coinValue, ' cents!' ) #
-#       nrCoinsReturned = int(input('How many coins of ' + str(coinValue) +  ' cents did you return? ')) #
-#       change -= nrCoinsReturned * coinValue #
-#       totaal= nrCoinsReturned
-#       totaal1= coinValue
+values= [] #voor het random delen van values
+for i in range (4):
+    random_number = random.randint(0,aantal_MMs)
+    values.append(random_number)
+    aantal_MMs-=random_number
+values.append(aantal_MMs)
 
-# for i in [1, 3, 5, 7, 9]:
-#     x = i**2 - (i-1)*(i+1)
-#     print(x, end=", ") # prints 1, 1, 1, 1, 1, 
+zipp_zak = zip(kleuren_lijst,values) #values en keys samen zippen
+zak_MMs = dict(zipp_zak) 
 
 
-correct_guess=9
-guess_count=0
-guess_limit=3
-while guess_count<guess_limit:
-    guess = int(input('Guess a number: '))
-    guess_count += 1
-    if guess == correct_guess:
-        print('Congratulations! You won!')
-        break
-else:
-    print('sorry you lost')
+for key in list(zak_MMs.keys()): # voor elke key in Dictionary 
+    if zak_MMs[key] ==0:  # als de waarde van de key gelijk aan 0
+        del zak_MMs[key] #wordt verwijdert uit de Dictionary
+
+print (zak_MMs)
