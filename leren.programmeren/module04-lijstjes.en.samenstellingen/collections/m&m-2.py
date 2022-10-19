@@ -18,10 +18,6 @@ for key in kleuren_lijst:
         zak_MMs[key] = value
         values.remove(value)
         break
-
-# verwijderen van de key als de waarde 0 is:   
-for key in list(zak_MMs.keys()): # voor elke key in Dictionary 
     if zak_MMs[key] ==0:  # als de waarde van de key gelijk aan 0
         del zak_MMs[key] #wordt verwijdert uit de Dictionary
-
 print (zak_MMs)
