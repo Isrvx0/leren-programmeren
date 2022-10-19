@@ -14,8 +14,11 @@ while True:
     if extra.lower() != "ja":
       break
 
-zipp_list = zip(items_list,aantal_list) 
-boodschappen_lijst = dict(zipp_list) 
+for key in items_list:
+    for value in aantal_list:
+        boodschappen_lijst[key] = value
+        aantal_list.remove(value)
+        break
 
 if extra.lower() == 'nee':
     print ('[------BOODSCHAPENLIJST------')
