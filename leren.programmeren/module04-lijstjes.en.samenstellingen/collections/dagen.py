@@ -6,28 +6,3 @@ print ('De weekenddagen zijn: ' , weekdagen[-2:])
 print('\nAlle dagen van de week in omgekeerde volgorde zijn: ', weekdagen [:: -1])
 print('De werkdagen in omgekeerde volgorde zijn: ' , weekdagen [-3::-1])
 print('De weekenddagen in omgekeerde volgorde zijn: ' ,weekdagen [:4:-1]) #begint van 4
-
-
-
-
-
-
-
-
-
-
-#_____ andere manieren (onder elkaar en met for loop)
-
-# dagen = ("maandag", "dinsdag", "woensdag", "donderdag",
-#          "vrijdag", "zaterdag", "zondag")
-# for dag in dagen:
-#   print(dag)
-
-# # resultaat:
-# maandag
-# dinsdag
-# woensdag
-# donderdag
-# vrijdag
-# zaterdag
-# zondag
