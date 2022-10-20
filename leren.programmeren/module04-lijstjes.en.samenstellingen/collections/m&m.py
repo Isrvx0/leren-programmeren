@@ -7,7 +7,7 @@ kleuren_lijst= ('oranje','blauw','groen','bruin')
 hoeveelheid= int (input ("Hoeveel M&M's er aan de zak toegevoegd moeten worden?  "))
 
 for i in range (hoeveelheid):
-    zak_MMs.append(random.choices(kleuren_lijst))
+    zak_MMs.append(random.choice(kleuren_lijst))
 
 print (zak_MMs)
 
