@@ -7,6 +7,8 @@ aantal_list= []
 
 while True:
     items = input('Voeg uw item toe:  ')
+    if items.lower() in items_list:
+        print ('De item staat in je boodschappenlijstje. Voer het totale aantal van het product in.')
     items_list.append(items.lower())
     aantal= int(input(f'Hoeveel {items} wil je?   '))
     aantal_list.append(aantal)
