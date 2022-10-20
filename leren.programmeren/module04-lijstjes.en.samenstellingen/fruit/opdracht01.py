@@ -1,2 +1,4 @@
 from fruitmand import fruitmand
-print(fruitmand)
+
+for fruit in (fruitmand):
+    print(fruit)
