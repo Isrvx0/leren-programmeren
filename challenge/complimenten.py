@@ -21,6 +21,5 @@ for compliment in range (hoeveel):
     random_choice= random.choice(complimenten)
     while random_choice == oude_random:
          random_choice= random.choice(complimenten)
-    if random_choice != oude_random:
-        print (random_choice , naam)
+    print (random_choice , naam)
     oude_random = random_choice
