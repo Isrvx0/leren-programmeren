@@ -1,14 +1,13 @@
 import random
-from random import randint
 
-# # complimenten= ['je bent geweldig' , 'je bent mooi' , 'je bent leuk' , 'je bent lief' , 'je bent perfect']
-# # naam= input('wat is je naam?  ')
+complimenten= ['je bent geweldig' , 'je bent mooi' , 'je bent leuk' , 'je bent lief' , 'je bent perfect']
+naam= input('wat is je naam?  ')
 
-# # hoeveel= int(input('Hoeveel complimenten wil je?  '))
+hoeveel= int(input('Hoeveel complimenten wil je?  '))
 
-# # for comp in range (hoeveel):
-# #     random_choice= random.choice(complimenten)
-# #     print(random_choice , naam)
+for comp in range (hoeveel):
+    random_choice= random.choice(complimenten)
+    print(random_choice , naam)
 
 # #------uitbereiden
 
