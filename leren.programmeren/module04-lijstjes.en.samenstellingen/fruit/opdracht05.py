@@ -1,5 +1,5 @@
 from fruitmand import fruitmand
 
 fruitmand.reverse()
-for fruit in range (0,7):
-    print(fruitmand[fruit]['name'])
+for teller in range (0,len(fruitmand)):
+    print(fruitmand[teller]['name'])

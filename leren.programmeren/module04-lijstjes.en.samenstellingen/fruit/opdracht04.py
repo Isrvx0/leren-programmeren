@@ -1,8 +1,8 @@
 from fruitmand import fruitmand
 import random
 
-hoeveel_fruit= int(input("Hoeveel fruit wil je? (Max. 7)  "))
+hoeveel_fruit= int(input(f"Hoeveel fruit wil je? max {len(fruitmand)} "))
 
 random.shuffle(fruitmand)
-for fruit in range (hoeveel_fruit):
-    print(fruitmand[fruit]['name'])
+for teller in range (hoeveel_fruit):
+    print(fruitmand[teller]['name'])

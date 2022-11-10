@@ -1,6 +1,11 @@
 from fruitmand import fruitmand
+
 #opdracht 1
-kleuren_list= ['yellow', 'green', 'orange', 'red', 'brown']
+kleuren_list= []
+for i in range (len(fruitmand)):
+        if fruitmand[i]['color'] not in kleuren_list:
+            kleuren_list.append(fruitmand[i]['color'])
+
 while True:
         kleur = input("kies een kleur uit de beschikbare kleuren: %s   " % kleuren_list)
         if kleur.lower() in kleuren_list:
@@ -13,7 +18,7 @@ while True:
 round_fruits= 0
 niet_round_fruits= 0
 
-for fruit in range (0,7):
+for fruit in range (0,len(fruitmand)):
         if fruitmand[fruit]['round']== True and fruitmand[fruit]['color'] == kleur.lower():
                 round_fruits +=1
         elif fruitmand[fruit]['round']== False and fruitmand[fruit]['color'] == kleur.lower():
