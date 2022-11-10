@@ -1,5 +1,5 @@
 from fruitmand import fruitmand
 
-for fruit in range (0,7):
-    if fruitmand[fruit]['round']== True:
-        print(fruitmand[fruit]['name'])
+for teller in range (0,len(fruitmand)):
+    if fruitmand[teller]['round']: #if not -- if f false
+        print(fruitmand[teller]['name'])

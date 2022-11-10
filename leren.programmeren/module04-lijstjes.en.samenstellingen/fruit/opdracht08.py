@@ -1,6 +1,7 @@
 from fruitmand import fruitmand
 
-fruitmand.append({'name' : 'watermelon'})
-for weight in range (0,7):
-    print(fruitmand[weight]['weight'])
+fruitmand.append({'name' : 'watermelon' , 'weight' : 7 })
+
+for teller in range (0,len(fruitmand)):
+    print(fruitmand[teller]['weight'])
  
