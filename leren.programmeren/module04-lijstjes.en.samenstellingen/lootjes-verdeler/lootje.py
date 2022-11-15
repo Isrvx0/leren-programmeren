@@ -1,11 +1,12 @@
 import random
-# voor aantal delnemers
+
+# voor aantal delnemers:
 aantal = int(input('wat is de aantal van de delnemers? '))
 while aantal < 3:
     print('Aantal delnemers moet 3 of meer zijn.')
     aantal = int(input('wat is de aantal van de delnemers? '))
 
-# voor namen van de delnemers
+# voor namen van de delnemers:
 namen_list= []
 newList = []
 
@@ -19,12 +20,12 @@ while teller <= aantal:
         newList.append(naam.lower())
         teller +=1
 
-# voor lootje trekker
+# voor lootje trekker:
 random.shuffle(namen_list)
 for i in range (0,aantal):
     deelnemer= namen_list[i]
     random_choice= random.choice(newList)
     while deelnemer == random_choice:
-        random_choice= random.choice(newList)
+        random_choice = random.choice(newList)
     print ('(',deelnemer, ':', random_choice,')')
     newList.remove(random_choice)
