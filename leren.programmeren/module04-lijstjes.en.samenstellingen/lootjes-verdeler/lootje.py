@@ -12,11 +12,11 @@ newList = []
 teller = 1 #teller begint altijd met 0 
 while teller <= aantal:
     naam= input(f'wat is de naam van delnemer {teller}?   ')
-    if naam in namen_list:
+    if naam.lower() in namen_list:
         print('mag allen unieke namen! probeer nog een keer')
     else:
-        namen_list.append(naam)
-        newList.append(naam)
+        namen_list.append(naam.lower())
+        newList.append(naam.lower())
         teller +=1
 
 # voor lootje trekker
