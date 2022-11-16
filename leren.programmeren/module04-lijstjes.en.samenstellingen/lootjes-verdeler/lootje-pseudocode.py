@@ -1,28 +1,36 @@
 # import random
 
-# aantal = wat is de aantal van de delnemers?
-# while aantal kleiner dan 3:
-#     print(Aantal delnemers moet 3 of meer zijn.)
-#     aantal= (wat is de aantal van de delnemers?)
+# aantal = wat is de aantal van de deelnemers?
+# while aantal is kleiner dan 3:
+#     print(Aantal deelnemers moet 3 of meer zijn.)
+#     aantal = wat is de aantal van de deelnemers?
 
-# namen_list= []
+# namen list= []
 # newList = []
 
-# teller = 1 // teller begint altijd met 0 
-# while teller kleiner of gelijk aan de aantal deelnemers:
-#     naam= (wat is de naam van delnemer?)
-#     if de naam zit in de namen lijst:
+# teller = 1 
+# zolang teller kleiner of gelijk aan aantal deelnemers:
+#     naam= (wat is de naam van deelnemers?)
+#     if naam zit in de namen lijst:
 #         print(mag allen unieke namen! probeer nog een keer)
 #     else:
-#         namen lijst voeg de (naam) toe
-#         newList voeg de (naam) toe
-#         teller is + 1
+#         namen lijst voeg  (naam) toe
+#         newList voeg  (naam) toe
+#         teller wordt + 1
 
-# random shuffle voor de namen lijst.
-# for i in range (0 , aantal):  #i = index 
-#     deelnemer is = namen lijst[i]
-#     random choice= random choice in de newList
-#     while deelnemer gelijk aan de  random choice:
-#         random choice= random choice in de newList
-#     print (deelnemer random_choice)
-#     newList remove de random_choice
+# random shuffle voor namen lijst.
+# for elke deeelnemer in namenlijst:
+#     keuze= willekeurige keuze uit de newList.
+#     als de lengte van de newList gelijk aan 1 , en deelnemer gelijk aan de  willekeurige keuze
+#           nweList zal alle items verwijderen.
+#           for elke naam in de namenlijst:
+#               newList voeg de naam in
+#           for elke deeelnemer in namenlijst:
+#               keuze= willekeurige keuze uit de newList.
+#           zolang deelnemer gelijk aan de  willekeurige keuze:
+#               keuze= willekeurige keuze uit de newList.
+#     anders:
+#           zolang deelnemer gelijk aan de  willekeurige keuze:
+#               keuze= willekeurige keuze uit de newList.
+#     print (deelnemer , keuze)
+#     newList verwijdert de keuze
