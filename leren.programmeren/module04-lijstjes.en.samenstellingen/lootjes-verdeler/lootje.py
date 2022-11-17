@@ -39,4 +39,3 @@ for deelnemer in namen_list:
            random_choice = random.choice(newList)
     print ('(',deelnemer, ':', random_choice,')')
     newList.remove(random_choice)
-
