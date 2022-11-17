@@ -19,7 +19,7 @@
 #         teller wordt + 1
 
 # random shuffle voor namen lijst.
-# for elke deeelnemer in namenlijst:
+# for elke deelnemer in namenlijst:
 #     keuze= willekeurige keuze uit de newList.
 #     als de lengte van de newList gelijk aan 1 , en deelnemer gelijk aan de  willekeurige keuze
 #           nweList zal alle items verwijderen.
