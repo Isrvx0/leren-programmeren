@@ -1,17 +1,17 @@
 import random
 
-# voor aantal delnemers:
+# voor aantal deelnemers:
 VRAAG = 'Wat is de aantal van de deelnemers? '
 aantal = int(input(VRAAG))
 while aantal < 3:
     print('Aantal deelnemers moet 3 of meer zijn.')
     aantal = int(input(VRAAG))
 
-# voor namen van de delnemers:
+# voor namen van deelnemers:
 namen_list= []
 newList = []
 
-teller = 1 #teller begint altijd met 0 
+teller = 1 
 while teller <= aantal:
     naam= input(f'wat is de naam van deelnemers {teller}?   ')
     if naam.lower() in namen_list:
