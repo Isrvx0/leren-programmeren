@@ -10,7 +10,7 @@ while aantal < 3:
 # voor namen van deelnemers:
 namen_list= []
 newList = []
-
+lootjes ={}
 teller = 1 
 while teller <= aantal:
     naam= input(f'wat is de naam van deelnemers {teller}?   ')
@@ -21,21 +21,22 @@ while teller <= aantal:
         newList.append(naam.lower())
         teller +=1
 
-
-random.shuffle(namen_list)
-
 for deelnemer in namen_list:
-    random_choice= random.choice(newList)
-    if len(newList) == 1 and random_choice == deelnemer:
+    lootje= random.choice(newList)
+    if len(newList) == 1 and lootje == deelnemer:
         newList.clear()
         for namen in namen_list:
             newList.append(namen)
-            for deelnemer in namen_list:
-                random_choice= random.choice(newList)
-            while deelnemer == random_choice:
-                random_choice = random.choice(newList)
+        for deelnemer in namen_list:
+            lootje= random.choice(newList)
+            while deelnemer == lootje:
+                lootje = random.choice(newList)
+            lootjes[deelnemer] = lootje
+            newList.remove(lootje)
     else:
-        while deelnemer == random_choice:
-           random_choice = random.choice(newList)
-    print ('(',deelnemer, ':', random_choice,')')
-    newList.remove(random_choice)
+        while deelnemer == lootje:
+            lootje = random.choice(newList)
+        lootjes[deelnemer] = lootje
+        newList.remove(lootje)
+
+print(lootjes)
