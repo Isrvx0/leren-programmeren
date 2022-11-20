@@ -22,21 +22,21 @@ while teller <= aantal:
         teller +=1
 
 for deelnemer in namen_list:
-    lootje= random.choice(newList)
-    if len(newList) == 1 and lootje == deelnemer:
+    keuze= random.choice(newList)
+    if len(newList) == 1 and keuze == deelnemer:
         newList.clear()
         for namen in namen_list:
             newList.append(namen)
         for deelnemer in namen_list:
-            lootje= random.choice(newList)
-            while deelnemer == lootje:
-                lootje = random.choice(newList)
-            lootjes[deelnemer] = lootje
-            newList.remove(lootje)
+            keuze= random.choice(newList)
+            while deelnemer == keuze:
+                keuze = random.choice(newList)
+            lootjes[deelnemer] = keuze
+            newList.remove(keuze)
     else:
-        while deelnemer == lootje:
-            lootje = random.choice(newList)
-        lootjes[deelnemer] = lootje
-        newList.remove(lootje)
+        while deelnemer == keuze:
+            keuze = random.choice(newList)
+        lootjes[deelnemer] = keuze
+        newList.remove(keuze)
 
 print(lootjes)

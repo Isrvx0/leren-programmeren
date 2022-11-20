@@ -7,6 +7,7 @@
 
 # namen list= []
 # newList = []
+# lootjes = {}
 
 # teller = 1 
 # zolang teller kleiner of gelijk aan aantal deelnemers:
@@ -18,19 +19,23 @@
 #         newList voeg  (naam) toe
 #         teller wordt + 1
 
-# random shuffle voor namen lijst.
+
 # for elke deelnemer in namenlijst:
-#     keuze= willekeurige keuze uit de newList.
+#     lootje= willekeurige keuze uit de newList.
 #     als de lengte van de newList gelijk aan 1 , en deelnemer gelijk aan de  willekeurige keuze
-#           nweList zal alle items verwijderen.
-#           for elke naam in de namenlijst:
+#         nweList zal alle items verwijderen.
+#         for elke naam in de namenlijst:
 #               newList voeg de naam in
-#           for elke deeelnemer in namenlijst:
-#               keuze= willekeurige keuze uit de newList.
-#           zolang deelnemer gelijk aan de  willekeurige keuze:
-#               keuze= willekeurige keuze uit de newList.
-#     anders:
-#           zolang deelnemer gelijk aan de  willekeurige keuze:
-#               keuze= willekeurige keuze uit de newList.
-#     print (deelnemer , keuze)
-#     newList verwijdert de keuze
+#         for elke deeelnemer in namenlijst:
+#             lootje= willekeurige keuze uit de newList.
+#             zolang deelnemer gelijk aan de  willekeurige keuze:
+#                 lootje = willekeurige keuze uit de newList.
+#             lootjes key is [deelnemer] en lootjes value is [lootje]
+#             newList verwijdert de keuze
+#     else:
+#         zolang deelnemer gelijk aan de  willekeurige keuze:
+#             lootje = willekeurige keuze uit de newList.
+#         lootjes key is [deelnemer] en lootjes value is [lootje]
+#         newList verwijdert de keuze
+
+# print de lootjes.
