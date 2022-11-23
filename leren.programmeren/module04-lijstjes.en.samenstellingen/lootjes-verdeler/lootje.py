@@ -11,6 +11,7 @@ while aantal < 3:
 namen_list= []
 newList = []
 lootjes ={}
+
 teller = 1 
 while teller <= aantal:
     naam= input(f'wat is de naam van deelnemers {teller}?   ')
@@ -21,6 +22,8 @@ while teller <= aantal:
         newList.append(naam.lower())
         teller +=1
 
+
+# voor lootjes trekken:
 for deelnemer in namen_list:
     keuze= random.choice(newList)
     if len(newList) == 1 and keuze == deelnemer:
