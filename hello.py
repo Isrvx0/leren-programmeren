@@ -1,4 +1,4 @@
 def hello():
-    return ('Hello from function town')
+    print ('Hello from function town')
 
-print (hello())
+hello()
