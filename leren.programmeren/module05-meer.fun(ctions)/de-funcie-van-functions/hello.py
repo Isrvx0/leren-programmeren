@@ -1,4 +1,4 @@
 def hello (num):
     for i in range(num):
-        print ('Hello from function town')
-hello()
+        print (f'Hello from function town {i}')
+hello(7)
