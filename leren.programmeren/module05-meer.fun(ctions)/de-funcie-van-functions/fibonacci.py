@@ -1,8 +1,8 @@
-def fibonacci(nummer):
+def getallenreeks_berekenen(nummer):
    if nummer <= 1:
        return nummer
    else:
-       return(fibonacci(nummer-1) + fibonacci(nummer-2))
+       return(getallenreeks_berekenen(nummer-1) + getallenreeks_berekenen(nummer-2))
 
 nterms = int(input('Hoeveel getalen wil je? '))
 
@@ -11,13 +11,13 @@ if nterms <= 0:
 else:
    print("Fibonacci getalen: ")
    for i in range(nterms):
-       print(fibonacci(i))
+       print(getallenreeks_berekenen(i))
 
 #_________________ 2e manieer :
 
 term= int(input('Hoeveel getalen wil je?  '))
 
-def fibonacci(num):
+def getallenreeks_berekenen(num):
     nummer_1 , nummer_2 = 0 , 1
     if num == 1 :
         print(f"de getallenreeks: {term} ")
@@ -29,4 +29,4 @@ def fibonacci(num):
             nummer_1 = nummer_2
             nummer_2 = answer
             print(answer)
-fibonacci (term) 
+getallenreeks_berekenen (term) 
