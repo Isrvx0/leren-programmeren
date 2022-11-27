@@ -31,3 +31,7 @@ print (getalen_lijst)
 
 #opgave 8:
 print(sum(getalen_lijst))
+
+#opgave 9:
+getalen_lijst.clear()
+print(getalen_lijst)
