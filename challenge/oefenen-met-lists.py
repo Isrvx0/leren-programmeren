@@ -7,3 +7,4 @@ for nummer in range (1,14):
 
 #opdarcht 2 t/m 12:
 getalen_lijst = ['5','12','19','27','3']
+getalen_lijst.append('25')
