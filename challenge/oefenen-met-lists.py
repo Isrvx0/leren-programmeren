@@ -35,3 +35,7 @@ print(sum(getalen_lijst))
 #opgave 9:
 getalen_lijst.clear()
 print(getalen_lijst)
+
+#opdagve 10:
+for getalen in range (1,4):
+    getalen_lijst.append(getalen)
