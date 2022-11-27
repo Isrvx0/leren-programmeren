@@ -20,3 +20,7 @@ print (getalen_lijst)
 getalen_lijst.remove('12')
 print(getalen_lijst)
 
+#opgave 6:
+print (getalen_lijst)
+getalen_lijst.pop(0)
+print(getalen_lijst)
