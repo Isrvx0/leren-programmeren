@@ -39,3 +39,7 @@ print(getalen_lijst)
 #opdagve 10:
 for getalen in range (1,4):
     getalen_lijst.append(getalen)
+
+#opgave 11:
+for num in range(4,51):
+    getalen_lijst.append(num)
