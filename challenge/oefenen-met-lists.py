@@ -46,3 +46,6 @@ for num in range(4,51):
 
 #opgave 12:
 print(getalen_lijst[25])
+
+#opgave 13:
+getalen_lijst[0], getalen_lijst[-1] = getalen_lijst[-1], getalen_lijst[0] 
