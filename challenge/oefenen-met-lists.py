@@ -49,3 +49,9 @@ print(getalen_lijst[25])
 
 #opgave 13:
 getalen_lijst[0], getalen_lijst[-1] = getalen_lijst[-1], getalen_lijst[0] 
+
+#opgave 14:
+my_list = [1,'aap',2,'apen',3,'watermeloen',15,27,15,'lekker bezig','6']
+for i in my_list:
+    if type(i) == int:
+        print (i)
