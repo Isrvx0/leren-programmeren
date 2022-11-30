@@ -4,5 +4,3 @@ def multipier (num):
 
 vraag = int(input("Van welk getal wilt u de tafel zien? "))
 multipier(vraag)
-
-#hello 
