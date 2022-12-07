@@ -1,56 +1,78 @@
+import random
+import sys
+import time
+
+# function :
+def slowprint(s):
+	for c in s + '\n':
+		sys.stdout.write(c)
+		sys.stdout.flush()
+		time.sleep(1./10)
+
+def end_the_game():
+    return sys.exit()
+
+def try_again(vraag):
+    return input(vraag)
+
+#Collection:
+magicword = []
+
+#game start (intro) :
 naam= input ('please enter your name  ')
-welcome= print (f'hello {naam} and welcome in the forest full of puzzles.')
-intro= print("if you want to survive, you have to choose the right option and solve some puzzles.")
+print (f'hello {naam} and welcome in the forest full of puzzles.')
+print("\nif you want to survive, you have to choose the right option and solve some puzzles.")
 ready= input ('Are you ready? (yes,no)')
+
 if ready == 'yes':
-    print ('you are now in a house in this forest, you have to open the door by solving the next puzzel')
+    print ('\nYou are now in a house in this forest, you have to open the door by solving the next puzzel')
 else:
     print ('that is too bad, see you next time')
 
-import random
 num1 = random.randint(1,10)
 num2 = random.randint(5,15)
 
 while True:
     try: 
-        number = int ( input (f' Do you know what {num1} + {num2} ,is? ') )
+        number = int ( input (f'Do you know what {num1} + {num2} ,is?  ') )
         break 
     except ValueError:
         print ("thats not a number , pleaser try again!")
 
 if number == num1 + num2 : 
-        print(f'that is right {naam}, you opened the door and got out of the house')
+    print(f'that is right {naam}, you opened the door and got out of the house')
 else:
-            print(f'no, that is not right {naam} , you lose the game')
-            print ('GAME OVER')
-            raise NameError ('you lose')
+    print(f'no, that is not right {naam} , you lose the game')
+    print ('GAME OVER')
+    end_the_game()
 
-print ('---- level 2 ----')
+print ('\n---- level 2 ----')
 print ('you find a crossroads, do you want to go left or right?')
 crossroads = input ('please type (L) for left and (R) for right  ')
 
 if crossroads == 'L' or crossroads ==  'l':
-    monster = input (f' thers is a monster looking at you {naam}, do you want to attack or run?  ')
+    monster= input (f' thers is a monster looking at you {naam}, do you want to attack or run?  ')
 elif crossroads == 'R' or crossroads ==  'r': 
-            print (f'you fall into deep hole {naam}, you lose!')
-            print ('GAME OVER')
-            raise NameError ('you lose')
+    print (f'you fall into deep hole {naam}, you lose!')
+    print ('GAME OVER')
+    end_the_game()
 else:
     print ("No valid character! please try again ...")
-if monster == 'attack':
-    answer= print (f'wrong choice {naam}, you are not a hero. you lose!')
-    print ('GAME OVER')
-    raise NameError ('you lose')
+    try_again(crossroads)
 
+
+if monster == 'attack':
+    print (f'wrong choice {naam}, you are not a hero. you lose!')
+    print ('GAME OVER')
+    end_the_game()
 elif monster in ('run' , 'Run'):
-    answer= print('you survive, there is a box under the tree and there is a hint inside, you can only open it by solving the puzzel')
-    print (f'are you ready to solve the puzzel {naam} ?   ')
-    choice = input (' type (yes) or (no)  ')
+    print('\nyou survive, there is a box under the tree and there is a hint inside, you can only open it by solving the puzzel')
+    choice= input (f'are you ready to solve the puzzel {naam} ?\n type (yes) or (no):  ')
+
     if choice == 'no':
         print (f'thats too bad {naam}, see you next time')
         print ('GAME OVER')
-        raise NameError ('you lose')
-
+        end_the_game()
     elif choice == 'yes':
         print ('---- level 3 ----')
         print (f'AWESOME {naam}! The puzzel is: for what to use (int)? choose the right letter  ')
@@ -60,10 +82,10 @@ elif monster in ('run' , 'Run'):
     elif character == 'b' or character == 'c':
         print (f"wrong choice {naam}! You lose!")
         print ('GAME OVER')
-        raise NameError ('you lose')
+        end_the_game()
     
-print ('the hint in the box is a message. the message is:')
-print (f'hello {naam} , if you want to get out this forest and win, You have to collect the 6 hidden letters. Then make the right word from it. In this box, you will find the first hidden letter and it is -P-')
+print ('\n The hint in the box is a message. the message is:')
+print (f'Hello {naam} , if you want to get out this forest and win, You have to collect the 6 hidden letters. Then make the right word from it. In this box, you will find the first hidden letter and it is -P-')
 letter= input ('do you want to stay and find the other 5 leteters? choose between (yes) or (no).  ')
 if letter == 'yes':
     print ('---- level 4 ----')
@@ -71,7 +93,7 @@ if letter == 'yes':
 elif letter == 'no':
     print (f"so bad {naam} , maybe next time!")
     print ('GAME OVER')
-    raise NameError ('you lose')
+    end_the_game()
 
 print ("the puzzel is: i see what you cant see and the color is 'green' ")
 seegame = input ('choose the right letter: a)house b) box c)tree  ')
@@ -82,16 +104,17 @@ if seegame == 'c':
 else:
     print (f'{naam} , thats not the right choice, you Lose!')
     print ('GAME OVER')
-    raise NameError ('you lose')
+    end_the_game()
     
 print ('the next hidden letter is in the lake near to you')
 lakepuzzel = input ('if you want to stay and find it, type (yes). and if you want to leave, type (no).  ')
+
 if lakepuzzel == 'yes':
     print ('great, solve the next puzzel and get the hidden letter ..')
 elif lakepuzzel == 'no':
     print (f'that is too bad, see you next time {naam} ')
     print ('GAME OVER')
-    raise NameError ('you lose')
+    end_the_game()
 
 print ("what is (string)")
 puzzel3= input ('choose the right choice: a) number . b) word or phrase . c decimal number  ')
@@ -101,7 +124,8 @@ if puzzel3 == 'b':
 elif puzzel3 == 'a' or  puzzel3 == 'c':
     print (f'thats not correct {naam} , see you next time! ')
     print ('GAME OVER')
-    raise NameError ('you lose')
+    end_the_game()
+
 print (f'you are doing great job {naam}. Dont give up! you are so close to the end! ')
 print ('this time you will find 2 hidden letters, but the 2 puzzels will be difficult! So stay awake and focus! ')
 hint1 = input ('first puzzel, which of the following is data-type?  a) Text type . b) programming type . c)puzzel type  ') 
@@ -110,7 +134,8 @@ if hint1 == 'a':
 elif hint1 == 'b' or hint1 == 'c':
     print (f"that's not the right answer {naam}. you lose!")
     print ('GAME OVER')
-    raise NameError ('you lose')
+    end_the_game()
+
 print ('the second puzzel is: Which type of Programming does Python support?')
 python_support = input (" a) object-oriented programming . b)structured programming . c)all of the mentioned  ")
 if python_support == "c":
@@ -119,7 +144,8 @@ if python_support == "c":
 elif python_support == 'a' or python_support == 'b':
     print (f'that was close {naam}, maybe next time')
     print ('GAME OVER')
-    raise NameError ('you lose')
+    end_the_game()
+
 print ("you find the 2 hidden letter: its -Y- and -H-. one letter left! I'll give you a hint to find it. It's on something in this forest, you use is to make fire!" )
 print ('.')
 print ('.')
@@ -139,7 +165,7 @@ if lastpuzzel in ('wood' , 'Wood'):
 else:
     print (f"that was not the right answer {naam}! you lose the game!")
     print ('GAME OVER')
-    raise NameError ('you lose')
+    end_the_game()
 
 print ("you are so close for the win! THE LAST HIDEN LETTER IS -N- ! You collect all the hidden letter and now your last job is to make from them the magic word that will help you to get out this forest")
 print("the letters are { P , T , O , Y , H , N")
@@ -150,7 +176,7 @@ if magicword in ('PYTHON' , 'python' , 'Python'):
 else:
     print ("OOi that was not the right answer {naam} , you lose the game! ")
     print ('GAME OVER')
-    raise NameError ('you lose')
+    end_the_game()
 print ("                          _,.-'') ,....")
 print ("                      .-'      /'     ")
 print ("                    /        /       /")
@@ -190,3 +216,5 @@ print ("------------------------------------------------")
 
 
 
+# play again?:
+# https://stackoverflow.com/questions/26961427/asking-the-user-if-they-want-to-play-again
