@@ -17,7 +17,8 @@ keuze = input('\nWat wilt u doen? A) getallen optellen, B) getallen aftrekken, C
 while extra :
     #1 of 2 getalen?
     if nummer_1 >= 0 :
-        if keuze in twee_getalen:
+        nummer_1 = antwoord
+        if keuze.lower() in twee_getalen:
             nummer_2 = int(input('wat is nummer 2?  '))
     elif keuze.lower() in twee_getalen:
         nummer_1 = int(input('wat is nummer 1?  '))
