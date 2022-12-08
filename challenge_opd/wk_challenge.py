@@ -30,15 +30,14 @@ for landen in LANDEN_GROEP_A:
         TEGEN_GROEP.remove(keuze)
 
 # DOELPUNTEN:
-print("\n{:<20} {:<20} {:<30} {:<20} {:<30}".format('Thuis', 'Uit' , 'Doelpunten land 1' , 'Doelpunten land 2' , 'Winnaar')) 
 for key , value in WEDSTRIJD.items():
-    land_1 = random.randint(0,3)
-    land_2 = random.randint(0,3)
+    land_1 = int(input(f'score van land {key}:  '))
+    land_2 = int(input(f'score van land {value}:  '))
     if land_1 > land_2:
         winnaar = 'land 1'
     elif land_1 < land_2 :
         winnaar = 'land 2'
     elif land_1 == land_2 :
         winnaar = 'Gelijk speel'
-    print("{:<20} {:<20} {:<30} {:<20} {:<30} ".format( key, value , land_1 , land_2 , winnaar))
-
+    print("\n{:<20} {:<20} {:<30} {:<20} {:<30}".format('Thuis', 'Uit' , 'Doelpunten land 1' , 'Doelpunten land 2' , 'Winnaar')) 
+    print ("{:<20} {:<20} {:<30} {:<20} {:<30} ".format( key, value , land_1 , land_2 , winnaar))
