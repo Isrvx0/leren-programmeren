@@ -13,173 +13,247 @@ def end_the_game():
     return sys.exit()
 
 #Collection:
-magicword = ['p','y','t','h','o','n']
-#game start (intro) :
-naam= input ('please enter your name  ')
-print (f'Hello {naam} and welcome in the forest full of puzzles.')
-print("\nIf you want to survive, you have to choose the right option and solve some puzzles.")
-ready= input ('Are you ready? (yes,no)  ')
+directions = ["left", "right", "forward", "backward"]
 
-if ready.lower() == 'yes':
-    print ('\nYou are now in a house in this forest, you have to open the door by solving the next puzzel')
-else:
-    print ('that is too bad, see you next time')
 
-num1 = random.randint(1,10)
-num2 = random.randint(5,15)
+#variable:
+score = 0
+direction = "" 
 
-while True:
-    try: 
-        number = int ( input (f'Do you know what {num1} + {num2} ,is?  ') )
-        break 
-    except ValueError:
-        print ("thats not a number , pleaser try again!")
+#start of the game (intro) :
+play = True
 
-if number == num1 + num2 : 
-    print(f'that is right {naam}, you opened the door and got out of the house')
-else:
-    print(f'no, that is not right {naam} , you lose the game')
-    print ('GAME OVER')
-    end_the_game()
+while play:
 
-print ('\n---- level 2 ----')
-choice = input ('You find a crossroads, do you want to go left or right? \n Please type (L) for left and (R) for right:  ')
+    name= input ("What's your name, adventurer?   ")
+    slowprint("""
+    \nYou woke up and found yourself in a dark forest.
+If you want to survive ...
+You have to solve the puzzles.
 
-if choice.lower() == 'l':
-    choice= input (f' thers is a monster looking at you {naam}, do you want to attack or run?  ')
-elif choice.lower() =='r': 
-    print (f'you fall into deep hole {naam}, you lose!')
-    print ('GAME OVER')
-    end_the_game()
+And every time you find the solution to a puzzle, your power will rise. 
+Which is what you will need in the end to kill the beast and survive and get out of the forest
+    """)
+    ready= input (f'\nAre you ready {name}? (yes,no)  ')
 
-if choice.lower() == 'attack':
-    print (f'wrong choice {naam}, you are not a hero. you lose!')
-    print ('GAME OVER')
-    end_the_game()
-elif choice.lower() == 'run':
-    print('\nyou survive, there is a box under the tree and there is a hint inside, you can only open it by solving the puzzel')
-
-choice= input (f'are you ready to solve the puzzel {naam} ?\n type (yes) or (no):  ')
-if choice == 'no':
-    print (f'thats too bad {naam}, see you next time! \nGAME OVER')
-    end_the_game()
-elif choice == 'yes':
-    print ('---- level 3 ----')
-    print (f'AWESOME {naam}! The puzzel is: for what to use (int)? choose the right letter  ')
-
-choice= input ('a) integer , b) float, c) complex   ')
-if choice.lower() == 'a':
-    print(f"you are genius {naam}! the box is open now")
-else:
-    print (f"wrong choice {naam}! You lose! \nGAME OVER")
-    end_the_game()
+    if ready.lower() == 'yes':
+        slowprint('\nYou head into the forest. You hear crows cawwing in the distance.')
+    else:
+        slowprint(f'\nYou are not ready for this quest, see you nxt time {name}! ')
+        end_the_game()
     
-print ('\n The hint in the box is a message. the message is:')
-print (f'Hello {naam} , if you want to get out this forest and win, You have to collect the 6 hidden letters.\nThen make the right word from it. In this box, you will find the first hidden letter and it is {magicword[0]}')
-choice= input ('Do you want to stay and find the other 5 leteters? choose between (yes) or (no).  ')
-if choice == 'yes':
-    print ('---- level 4 ----')
-    print (f'NICE {naam}! if you want to find the next hidden letter, you need to solve the next puzzel ..')
-elif choice == 'no':
-    print (f"So bad {naam} , maybe next time! \nGAME OVER")
-    end_the_game()
+    while direction not in directions:
+        slowprint(""" 
+To your left, you see a bear.
+To your right, there is way into the forest.
+There is a rock wall directly in front of you.
+Behind you is a deep hole.
+        """)
+        
+        direction = input("\nWhat direction do you move? \nleft / right / forward / backward \n")
+        if direction.lower() == "left":
+            slowprint(f"The bear eats you. Farewell, {name}")
+            end_the_game()
+        elif direction.lower() == "right":
+            slowprint("You head deeper into the forest.\n")
+            score +=1
+        elif direction.lower() == "forward":
+            slowprint("You cannot scale the wall.\n")
+            direction = "" 
+        elif direction.lower() == "backward":
+            slowprint(f'you fall into thr deep hole {name}, Cheerio!')
+            end_the_game()
+        else:
+            slowprint("I didn't understand that.\n")
+    slowprint("=================================END OF CHAPTER 1=================================")
 
-choice = input ("\nThe puzzel is: i see what you cant see and the color is 'green'. \nChoose the right letter: a)house b) box c)tree  ")
-if choice == 'c':
-    print (f'That is correct {naam}! you find the second hidden letter.\nThe hidden letter is {magicword[2]} ')
-    print ('---- level 5 ----')
-else:
-    print (f'{naam} , thats not the right choice, you Lose! \nGAME OVER')
-    end_the_game()
+    slowprint('\n---- Chapter 2 ----')
+    slowprint(f"""" Your power is still {score}.
+Remember ...
+You need to rise your power to kill the beast and survive. 
+So you have to make sure to solve all the puzzles and get out the forest.
+    """)
+    slowprint('\nThere is a lockt box under the tree in front of you and there is a hint inside.. \nThe hint will help you to kill the beast. \nYou can just open it by finding the 5 numbers of the lock by solving the following code')
+
+    choice= input (f'Are you ready to find the 5 numbers {name} ?\nType (yes) or (no):  ')
+    if choice == 'no':
+        slowprint(f'thats too bad {name}, see you next time! \nEND OF THE GAME')
+        end_the_game()
+    elif choice == 'yes':
+        slowprint(f'\nAWESOME {name}!')
     
-choice = input ('The next hidden letter is in the lake near to you.\nif you want to stay and find it,\ntype (yes). and if you want to leave, type (no).  ')
+    for num in range (1,6):
+        number1 = random.randint (0,4)
+        number2 = random.randint (0,4)
+        answer  = number1 + number2
+        lock_code = int(input((f"""Number {num} of the lock is: 
+wat is {number1} + {number2} ? 
+""")))
+        if lock_code == answer:
+            score +=1
+    
+    if score >= 5:
+        slowprint(f""""Good job {name}! the box is open now.
+The hint in the box is a message. the message is :
 
-if choice == 'yes':
-    print ('Great, solve the next puzzel and get the hidden letter ..')
-elif choice == 'no':
-    print (f'That is too bad, see you next time {naam}. \nGAME OVER')
-    end_the_game()
+Hello {name} , 
+We want to tell you an important secret about the beast. 
+You can only kill the beast if your power is higher than his power.
+Good luck.
+        """)
+    else:
+        slowprint(f"You didn't find the four numbers of the lock, that means you lose the hint.")
+    slowprint("=================================END OF CHAPTER 2=================================")
 
-print ()
-choice= input ('what is a (string)? \nChoose the right choice: a) number . b) word or phrase . c decimal number  ')
-if choice.lower() == 'b':
-    print (f'How can you be so smart! You find the 3e hidden letter! and that is {magicword[4]}')
-    print ('---- level 6 ----')
-else:
-    print (f'thats not correct {naam} , see you next time! \nGAME OVER')
-    end_the_game()
+    slowprint('\n---- Chapter 3 ----')
+    choice = input (f"""Hold on...
+look forward,
+There are zombie watching you.
+.
+..
+..
+He is coming to you..
+Choose Quickly...
+Do you want to fight him or to run?
+""")
 
-print (f'You are doing great job {naam}. Dont give up! you are so close to the end! \nThis time you will find 2 hidden letters, but the 2 puzzels will be difficult! So stay awake and focus! ')
-hint = input ('first puzzel, which of the following is data-type?  a) Text type . b) programming type . c)puzzel type  ') 
-if hint.lower() == 'a':
-    print ('correct! be ready for the next puzzel!')
-else:
-    print (f"that's not the right answer {naam}. you lose! \nGAME OVER")
-    end_the_game()
+    if choice == 'fight':
+        slowprint(f'Good choice {name}!')
+        score += 1
+    else:
+        slowprint(f'YOU RUN .. You fell on a rock.. The zombie bites you and you die \nGAME OVER')
+        end_the_game()
+    slowprint("=================================END OF CHAPTER 3=================================")
 
-print ('the second puzzel is: Which type of Programming does Python support?')
-choice = input (" a) object-oriented programming . b)structured programming . c)all of the mentioned  ")
-if choice == "c":
-    print (f"without a doubt, you are Einstein's grandson, GREAT JOB {naam} !")
-    print ('---- level 7 ----')
-elif choice == 'a' or choice == 'b':
-    print (f'that was close {naam}, maybe next time \nGAME OVER')
-    end_the_game()
+    slowprint('\n---- Chapter 4 ----') 
+    choice = input (f"""
+You're in a fight with the zombie .. what do you want to do?
+A. Bite him?           success 30%
+B. Push him?           success 45%
+c. Throw stone at him? success 60%
 
-print (f"you find the 2 hidden letter: its {magicword[1]} and {magicword[5]}. one letter left! I'll give you a hint to find it. It's on something in this forest, you use is to make fire!" )
-print ('.\n.\n.\n.')
-print ('I can help you with the answer, but you need to solve this puzzel!')
-print ("the puzzel is: Which of the following is the correct extension of the Python file? ")
-hint = input ('chose the right letter: a) .python b) .py c) .pl  ')
-if hint == 'b':
-    print (f"that's right {naam} , the answer for the past question is wood ")
-elif hint == 'a' or hint == 'c':
-    print ("that's not right! you lose the hint!")
+What is your choice? A , B or C ?
+""")
+    if choice.lower() == 'c':
+        slowprint(f"Good thinking {name} ...")
+        score +=1
+    else:
+        slowprint(f'That was not the best choice {name} .. He was stronger than you and killed you! \nGAME OVER ')
+        end_the_game()
+  
+    choice= input(("""WAIT ... He is still alive ... 
+Do you want to try to kill him with a tree trunk? 
+success = 85%..
+Take quickly a choice : 'yes' or 'no' ?   """))
+    if choice == 'yes':
+        slowprint(f"\nYou were born to be the savior of the world, good chocie {name}")
+        score += 2
+    else:
+        ('\nThe zombie is running to you... \nHe was faster than you and killed you! \nGAME OVER ')
+        end_the_game()
+    slowprint('You found a tree trunk and killed the zombie with it! ')
+    slowprint("=================================END OF CHAPTER 4=================================")
 
-choice = input ('what do you think the thing that is in the forest and it can be used to make fire?  ')
-if choice in ('wood' , 'Wood'):
-    print ('that was good! you find the LAST LETTER, GOOD JOB')
-    print ('---- level 8 ----')
-else:
-    print (f"that was not the right answer {naam}! you lose the game! \nGAME OVER")
-    end_the_game()
+    slowprint ('\n---- Chapter 5 ----')
+    slowprint (f'You are doing great job {name}. Dont give up! \nYou are so close to the end!')
+    choice = input ("""The place has become very dark.
+Moonlight illuminating a small part of the forest...
+..
+...
+Do you want to take a break and sleep? Or do you want to complete your way and fight the beast? 
+What is your choice? (sleep) or (fight)  ?""")
 
-random.shuffle(magicword)
-print (f"you are so close for the win! THE LAST HIDEN LETTER IS {magicword[3]} ! You collect all the hidden letter and now your last job is to make from them the magic word that will help you to get out this forest")
-print(f"the letters are {magicword}")
-magicword= input ('what is the magic word?   ')
-if magicword in ('PYTHON' , 'python' , 'Python'):
-    print (f'YOU ARE A REAL HERO {naam} ! YOU MADE IT AND YOU GET OUT THE FOREST! GREAT JOB ')
-    print ('YOU WIN THE GAME')
-else:
-    print (f"OOi that was not the right answer {naam} , you lose the game! \nGAME OVER")
-    end_the_game()
-print ("                          _,.-'') ,....")
-print ("                      .-'      /'     ")
-print ("                    /        /       /")
-print ("                  _:.   `. ,:.   _.-'")
-print ("                  /   `...'`  /.-'''.")
-print ("     ,       __../       \::,'     /    _.-.")
-print ("    /.\   .-'.--'\     ,' `'\     ,.  .'   _")
-print ("   | | |,'.'`     ;---'      ..--'  `/ ,-'' ''")
-print ("   \ | /,'      .'    \    ,'         `.   _.._")
-print ("   '|'/.-''-. ,'      `'''  _---_     ',-'")
-print ("     /// _.' / |                .        / ")
-print ("    /./.'  .'  |               _/ ,'      |")
-print ("   '/-'--'`    |           _.:.''`        |")
-print ("  .'           |         .'''\-'''`      .'")
-print ("  |'           \        /.//'/            /")
-print ("  ||          ,--    ._: ||_/           _/.-`")
-print ("  ||         |         |  '/     ._``:.`_..-'")
-print ("  ||         `.        `-''     //.:/.:-..-'" )
-print ("  ||          \       . /.''\  |||///'")
-print ("  ||        ,-'``\    \/|`'. : :_`/`")
-print ("  |'      ,'          | |/  \|  '/")
-print ("  '|     /  ,-'    _,-,\_\   '   ;")
-print ("   \\,_.' ,'   _,``  _/`-..__..-'")
-print ("    \[_`;.--''   _..'")
-print ("    / ='....----''\  _      YOU ARE")
-print ("    `-|'         '|/' |    MY Hero")
-print ("     || \         /_./")
-print (f"    |'  -----------          {naam}!!!")
-print ("------------------------------------------------")
+    if choice.lower() == 'sleep':
+        slowprint (f'Good chocie')
+        score +=5
+        slowprint("""You went under a big tree and fell asleep.
+..
+...
+< The next morning >
+the sun is shining..
+you woke up and got ready to fight the beast..
+""")
+        slowprint("=================================END OF CHAPTER 5=================================")
+    else:
+        slowprint (f'You decide to stay awake and fight the beast!')
+
+    slowprint ('\n---- Chapter 6 ----') 
+    slowprint(""" It's the moment ..
+You've done a great job so far..
+But now ..
+Is the time for confrontation ..
+The monster is coming to you...
+Your power level will be shown in seconds..
+""")
+    for loading in range (0,100,10):
+        slowprint(f'loading {loading}%.')
+    beast_power  = random.randint (10,15)
+    slowprint(f'Your power level is {score} , and the beast power is {beast_power}')
+
+    if score > beast_power:
+        slowprint (f"""" The fight started!
+The beast hit you hard.
+<You lost some of your power.>
+you got up and attacked him.
+<He lost some of his power.>
+He threw a big stone at you and you hit into the tree behind you.
+<You lost some of your power.>
+You used all your power and carried the tree and threw it at him.
+<He lost all his strength.>
+he is dying...
+He is died! """)
+
+        print (f""""YOU ARE A REAL HERO {name} ! 
+YOU MADE IT AND KILLED THE BEAST! 
+YOU SAVED THE WORLD ')
+        print ('YOU WIN THE GAME""")
+        print ("                          _,.-'') ,....")
+        print ("                      .-'      /'     ")
+        print ("                    /        /       /")
+        print ("                  _:.   `. ,:.   _.-'")
+        print ("                  /   `...'`  /.-'''.")
+        print ("     ,       __../       \::,'     /    _.-.")
+        print ("    /.\   .-'.--'\     ,' `'\     ,.  .'   _")
+        print ("   | | |,'.'`     ;---'      ..--'  `/ ,-'' ''")
+        print ("   \ | /,'      .'    \    ,'         `.   _.._")
+        print ("   '|'/.-''-. ,'      `'''  _---_     ',-'")
+        print ("     /// _.' / |                .        / ")
+        print ("    /./.'  .'  |               _/ ,'      |")
+        print ("   '/-'--'`    |           _.:.''`        |")
+        print ("  .'           |         .'''\-'''`      .'")
+        print ("  |'           \        /.//'/            /")
+        print ("  ||          ,--    ._: ||_/           _/.-`")
+        print ("  ||         |         |  '/     ._``:.`_..-'")
+        print ("  ||         `.        `-''     //.:/.:-..-'" )
+        print ("  ||          \       . /.''\  |||///'")
+        print ("  ||        ,-'``\    \/|`'. : :_`/`")
+        print ("  |'      ,'          | |/  \|  '/")
+        print ("  '|     /  ,-'    _,-,\_\   '   ;")
+        print ("   \\,_.' ,'   _,``  _/`-..__..-'")
+        print ("    \[_`;.--''   _..'")
+        print ("    / ='....----''\  _      YOU ARE")
+        print ("    `-|'         '|/' |    MY Hero")
+        print ("     || \         /_./")
+        print (f"    |'  -----------          {name}!!!")
+        print ("------------------------------------------------")
+        print ('.\n.\n.\n.')
+        again = input ("Do you want to play again? \ntype yes or no:  ")
+        if again.lower() == 'no':
+            print('See you next time superhero!')
+            play = False
+    else:
+        slowprint (f"""" The fight started!
+You hit the beast hard.
+<He lost some of his power.>
+He got up and attacked him.
+<You lost some of your power.>
+you threw a big stone at him and he hit into the tree behind him.
+<He lost some of his power.>
+He used all his power and carried the tree and threw it at you.
+<you lost all his strength.>
+you are dying...
+you are died! 
+GAME OVER ...""")
+        end_the_game()
+        
+
