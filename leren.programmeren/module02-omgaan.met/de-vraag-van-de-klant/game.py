@@ -9,12 +9,8 @@ def slowprint(s):
 		sys.stdout.flush()
 		time.sleep(1./10)
 
-def end_the_game():
-    return sys.exit()
-
 #Collection:
 directions = ["left", "right", "forward", "backward"]
-
 
 #variable:
 score = 0
@@ -24,7 +20,6 @@ direction = ""
 play = True
 
 while play:
-
     name= input ("What's your name, adventurer?   ")
     slowprint("""
     \nYou woke up and found yourself in a dark forest.
@@ -39,8 +34,8 @@ Which is what you will need in the end to kill the beast and survive and get out
     if ready.lower() == 'yes':
         slowprint('\nYou head into the forest. You hear crows cawwing in the distance.')
     else:
-        slowprint(f'\nYou are not ready for this quest, see you nxt time {name}! ')
-        end_the_game()
+        slowprint(f'\nYou are not ready for this quest, see you next time {name}! ')
+        exit()
     
     while direction not in directions:
         slowprint(""" 
@@ -53,7 +48,7 @@ Behind you is a deep hole.
         direction = input("\nWhat direction do you move? \nleft / right / forward / backward \n")
         if direction.lower() == "left":
             slowprint(f"The bear eats you. Farewell, {name}")
-            end_the_game()
+            exit()
         elif direction.lower() == "right":
             slowprint("You head deeper into the forest.\n")
             score +=1
@@ -61,8 +56,8 @@ Behind you is a deep hole.
             slowprint("You cannot scale the wall.\n")
             direction = "" 
         elif direction.lower() == "backward":
-            slowprint(f'you fall into thr deep hole {name}, Cheerio!')
-            end_the_game()
+            slowprint(f'you fall into deep hole {name}, Cheerio!')
+            exit()
         else:
             slowprint("I didn't understand that.\n")
     slowprint("=================================END OF CHAPTER 1=================================")
@@ -78,7 +73,7 @@ So you have to make sure to solve all the puzzles and get out the forest.
     choice= input (f'Are you ready to find the 5 numbers {name} ?\nType (yes) or (no):  ')
     if choice == 'no':
         slowprint(f'thats too bad {name}, see you next time! \nEND OF THE GAME')
-        end_the_game()
+        exit()
     elif choice == 'yes':
         slowprint(f'\nAWESOME {name}!')
     
@@ -122,7 +117,7 @@ Do you want to fight him or to run?
         score += 1
     else:
         slowprint(f'YOU RUN .. You fell on a rock.. The zombie bites you and you die \nGAME OVER')
-        end_the_game()
+        exit()
     slowprint("=================================END OF CHAPTER 3=================================")
 
     slowprint('\n---- Chapter 4 ----') 
@@ -139,7 +134,7 @@ What is your choice? A , B or C ?
         score +=1
     else:
         slowprint(f'That was not the best choice {name} .. He was stronger than you and killed you! \nGAME OVER ')
-        end_the_game()
+        exit()
   
     choice= input(("""WAIT ... He is still alive ... 
 Do you want to try to kill him with a tree trunk? 
@@ -150,7 +145,7 @@ Take quickly a choice : 'yes' or 'no' ?   """))
         score += 2
     else:
         ('\nThe zombie is running to you... \nHe was faster than you and killed you! \nGAME OVER ')
-        end_the_game()
+        exit()
     slowprint('You found a tree trunk and killed the zombie with it! ')
     slowprint("=================================END OF CHAPTER 4=================================")
 
@@ -254,6 +249,6 @@ He used all his power and carried the tree and threw it at you.
 you are dying...
 you are died! 
 GAME OVER ...""")
-        end_the_game()
+        exit()
         
 
