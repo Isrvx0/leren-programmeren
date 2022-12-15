@@ -1,23 +1,37 @@
 import time
 from termcolor import colored
-from data import JOURNEY_IN_DAYS
+from data import *
 
 ##################### M04.D02.O2 #####################
 
-def copper2silver(amount:int) -> float:
-    pass
+def copper2silver(copper:int) -> float:
+    answer = 1 / 10 * copper
+    return answer
 
-def silver2gold(amount:int) -> float:
-    pass
+def silver2gold(silver:int) -> float:
+    answer = 1 / 5 * silver
+    return answer
 
-def copper2gold(amount:int) -> float:
-    pass
+def copper2gold(copper:int) -> float:
+    answer = 1 / 50 * copper 
+    return answer
 
-def platinum2gold(amount:int) -> float:
-    pass
+def platinum2gold(platinum:int) -> float:
+    answer = 25 * platinum
+    return answer
 
 def getPersonCashInGold(personCash:dict) -> float:
-    pass
+    coin = 0
+    for key , value in personCash.items():
+        if key == 'platinum':
+            coin += platinum2gold(value)
+        elif key == 'gold':
+            coin += value
+        elif key == 'silver':
+            coin += silver2gold(value)
+        elif key == 'copper':
+            coin += copper2gold(value)
+    return coin
 
 ##################### M04.D02.O4 #####################
 
