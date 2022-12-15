@@ -1,22 +1,10 @@
-from functions import copper2silver, silver2gold, copper2gold, platinum2gold, getPersonCashInGold
+from data import *
+from functions import copper2gold 
 
+people = 10
+horses = 10
 
-lestDictionairy2 = {
-    'platinum' : 22,
-    'gold' : 38,
-    'silver' : 12,
-    'copper' : 3120
-}
-
-coin = 0
-for key , value in lestDictionairy2.items():
-    if key == 'platinum':
-        coin += platinum2gold(value)
-    elif key == 'gold':
-        coin += value
-    elif key == 'silver':
-        coin += silver2gold(value)
-    elif key == 'copper':
-        coin += copper2gold(value)
-print(coin)
-
+cost_people = people * copper2gold(COST_FOOD_HUMAN_COPPER_PER_DAY)
+coste_horses = horses * copper2gold(COST_FOOD_HORSE_COPPER_PER_DAY)
+totaal = round((cost_people + coste_horses) * JOURNEY_IN_DAYS , 2)
+print (totaal)
