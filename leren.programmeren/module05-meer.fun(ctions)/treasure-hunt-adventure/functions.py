@@ -44,7 +44,21 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 ##################### M04.D02.O5 #####################
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
-    pass
+    newlist = []
+    if value == True or value == False:
+        for teller in range (0,len(list)):
+            if value == True:
+                if list[teller][key]: 
+                     newlist.append(list[teller])
+                     
+            elif value == False:
+                if not list[teller][key]: 
+                     newlist.append(list[teller])
+    else:
+        for teller in range (0,len(list)):
+            if list[teller][key] and list[teller][value]:
+                newlist.append(list[teller])       
+    return newlist
 
 def getAdventuringPeople(people:list) -> list:
     pass
