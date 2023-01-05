@@ -45,30 +45,46 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     newlist = []
-    if value == True or value == False:
-        for teller in range (0,len(list)):
-            if value == True:
-                if list[teller][key]: 
-                     newlist.append(list[teller])
-                     
-            elif value == False:
-                if not list[teller][key]: 
-                     newlist.append(list[teller])
-    else:
-        for teller in range (0,len(list)):
-            if list[teller][key] and list[teller][value]:
+    for teller in range (0,len(list)):
+        if value == True and list[teller][key]: 
+                newlist.append(list[teller])
+             
+        elif value == False:
+            if not list[teller][key]: 
                 newlist.append(list[teller])       
     return newlist
 
 def getAdventuringPeople(people:list) -> list:
-    pass
+    newlist = []
+    for teller in range (0,len(people)):
+        if people[teller]['adventuring']:
+            newlist.append(newlist[teller]) 
+    return newlist
 
 def getShareWithFriends(friends:list) -> int:
-    pass
+    newlist = 0
+    for teller in range (0,len(friends)):
+        if friends[teller]['shareWith']:
+            newlist +=1
+    return newlist
 
 def getAdventuringFriends(friends:list) -> list:
-    pass
+    friends= []
+    newlist= []
 
+    shareWith = getFromListByKeyIs(list ,'shareWith', True)
+    adventuring = getFromListByKeyIs(list ,'adventuring', True) 
+
+    for it in shareWith:
+        newlist.append(it)
+    for itt in adventuring:
+        if itt not in newlist:
+            newlist.append(itt)
+
+    for teller in range (0,len(newlist)):
+        if newlist[teller]['shareWith'] and newlist[teller]['adventuring']:
+            friends.append(newlist[teller]['name']) 
+    
 ##################### M04.D02.O6 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:

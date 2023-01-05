@@ -72,24 +72,53 @@ list = [{
 #     if choice == "False":
 #         return False
 
+# newlist = []
 
-
-# # for teller in range (0,len(friends)):
-# #     if choose_1 in friends[teller] == True:
-# #         print (friends[teller])
- 
-
-# if value == 'True' or value == 'False':
-#     value = boolean(value)
-#     for teller in range (0,len(list)):
-#         if value == True:
-#             if list[teller][key]: 
-#                 print(list[teller]['name'])
-#         elif value == False:
-#             if not list[teller][key]: 
-#                 print(list[teller]['name'])
+# if value == True or value == False:
+#         for teller in range (0,len(list)):
+#             if value == True:
+#                 if list[teller][key]: 
+#                      newlist.append(list[teller])
+                     
+#             elif value == False:
+#                 if not list[teller][key]: 
+#                      newlist.append(list[teller])
 # else:
-#     for teller in range (0,len(list)):
-#         if list[teller][key] and list[teller][value]:
-#             print(list[teller]['name'])       
+#         for teller in range (0,len(list)):
+#             if list[teller][key] and list[teller][value]:
+#                 newlist.append(list[teller])       
 
+
+
+
+# for i in range (0,len(newlist)):
+#     print(newlist[i])
+# print("----------")
+# for items in range (0,len(newlist)):
+#     if newlist[items]['shareWith']:
+#         print(newlist[items]['name'])      
+# print("----------")
+
+
+
+
+
+friends= []
+shareWith = getFromListByKeyIs(list ,'shareWith', True)
+adventuring = getFromListByKeyIs(list ,'adventuring', True) 
+
+
+newlist= []
+
+for it in shareWith:
+    newlist.append(it)
+for itt in adventuring:
+    if itt not in newlist:
+        newlist.append(itt)
+
+for teller in range (0,len(newlist)):
+    if newlist[teller]['shareWith'] and newlist[teller]['adventuring']:
+        friends.append(newlist[teller]) 
+
+for items in friends:
+    print(items['name'])
