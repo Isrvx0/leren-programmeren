@@ -1,6 +1,7 @@
 import time
+import math
 from termcolor import colored
-from data import JOURNEY_IN_DAYS , COST_FOOD_HORSE_COPPER_PER_DAY , COST_FOOD_HUMAN_COPPER_PER_DAY
+from data import JOURNEY_IN_DAYS , COST_FOOD_HORSE_COPPER_PER_DAY , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_HORSE_SILVER_PER_DAY , COST_TENT_GOLD_PER_WEEK
 
 ##################### M04.D02.O2 #####################
 
@@ -55,46 +56,36 @@ def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     return newlist
 
 def getAdventuringPeople(people:list) -> list:
-    newlist = []
-    for teller in range (0,len(people)):
-        if people[teller]['adventuring']:
-            newlist.append(newlist[teller]) 
-    return newlist
+    return getFromListByKeyIs(people,'adventuring',True)
 
 def getShareWithFriends(friends:list) -> int:
-    newlist = 0
-    for teller in range (0,len(friends)):
-        if friends[teller]['shareWith']:
-            newlist +=1
-    return newlist
+    return getFromListByKeyIs(friends,'shareWith',True)
 
 def getAdventuringFriends(friends:list) -> list:
-    friends= []
     newlist= []
-
-    shareWith = getFromListByKeyIs(list ,'shareWith', True)
-    adventuring = getFromListByKeyIs(list ,'adventuring', True) 
-
-    for it in shareWith:
-        newlist.append(it)
-    for itt in adventuring:
-        if itt not in newlist:
-            newlist.append(itt)
-
-    for teller in range (0,len(newlist)):
-        if newlist[teller]['shareWith'] and newlist[teller]['adventuring']:
-            friends.append(newlist[teller]['name']) 
+    for teller in range (0,len(friends)):
+        if friends[teller]['adventuring'] and friends[teller]['shareWith']: 
+            newlist.append(friends[teller]['name'])
+    return newlist 
+    # return getAdventuringPeople(friends) and getShareWithFriends(friends)
     
 ##################### M04.D02.O6 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    pass
+    NumberOfHorses = round(people / 2)
+    return NumberOfHorses
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    pass
+    NumberOfTents = math.ceil(people / 3)
+    return NumberOfTents
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
-    pass
+    paard_gold = silver2gold(COST_HORSE_SILVER_PER_DAY)
+    
+    paard_kosten = paard_gold * JOURNEY_IN_DAYS * horses
+    tent_kosten = COST_TENT_GOLD_PER_WEEK * tents * 2
+    totaal = paard_kosten + tent_kosten
+    return totaal
 
 ##################### M04.D02.O7 #####################
 
