@@ -1,15 +1,41 @@
 from data import friends
-from functions import COST_TENT_GOLD_PER_WEEK , silver2gold , COST_HORSE_SILVER_PER_DAY , JOURNEY_IN_DAYS
+from functions import copper2gold , silver2gold , platinum2gold
+
+testList3 = [{
+    'name' : 'Diamand',
+    'amount' : 1,
+    'unit' : '',
+    'price' : {
+        'amount' : 7,
+        'type' : 'platinum'
+    }
+}]
 
 
+def getItemsValueInGold(items:list) -> float:
+    value= 0
+    for key in range (len(items)):
+        if items[key]['price']['type'] =='gold':
+            amount = items[key]['price']['amount']
+            value += amount
+        elif items[key]['price']['type'] =='copper':
+            amount = items[key]['price']['amount']
+            copper2gold(amount)
+            value += amount
+        elif items[key]['price']['type'] =='silver':
+            amount = items[key]['price']['amount']
+            silver2gold(amount)
+            value += amount
+        elif items[key]['price']['type'] =='platinum':
+            amount = items[key]['price']['amount']
+            platinum2gold(amount)
+            value += amount
+    return (value)
 
-# if getTotalRentalCost(1,2) != 23.0:
-# def getTotalRentalCost(horses:int, tents:int) -> float:             5.2
 
-paard_gold = silver2gold(COST_HORSE_SILVER_PER_DAY)
+print(getItemsValueInGold(testList3))
 
-paard_kosten = paard_gold * JOURNEY_IN_DAYS 
-tent_kosten = COST_TENT_GOLD_PER_WEEK * 4
-totaal = paard_kosten + tent_kosten
-
-print(totaal)
+if getItemsValueInGold(testList3) != 175:
+    print("foute")
+else:
+    print('goed')
