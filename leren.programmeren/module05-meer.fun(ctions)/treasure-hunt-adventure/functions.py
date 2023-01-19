@@ -1,7 +1,7 @@
 import time
 import math
 from termcolor import colored
-from data import JOURNEY_IN_DAYS , COST_FOOD_HORSE_COPPER_PER_DAY , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_HORSE_SILVER_PER_DAY , COST_TENT_GOLD_PER_WEEK
+from data import JOURNEY_IN_DAYS , COST_FOOD_HORSE_COPPER_PER_DAY , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_HORSE_SILVER_PER_DAY , COST_TENT_GOLD_PER_WEEK , NUMBER_OF_PEOPLE_FOR_ONE_HORSE , NUMBER_OF_PEOPLE_FOR_ONE_TENT
 
 ##################### M04.D02.O2 #####################
 
@@ -47,12 +47,8 @@ def getJourneyFoodCostsInGold(people:int, horses:int) -> float:
 def getFromListByKeyIs(list:list, key:str, value:any) -> list:
     newlist = []
     for teller in range (0,len(list)):
-        if value == True and list[teller][key]: 
+        if list[teller][key] == value: 
                 newlist.append(list[teller])
-             
-        elif value == False:
-            if not list[teller][key]: 
-                newlist.append(list[teller])       
     return newlist
 
 def getAdventuringPeople(people:list) -> list:
@@ -72,11 +68,11 @@ def getAdventuringFriends(friends:list) -> list:
 ##################### M04.D02.O6 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    NumberOfHorses = round(people / 2)
+    NumberOfHorses = round(people / NUMBER_OF_PEOPLE_FOR_ONE_HORSE)
     return NumberOfHorses
 
 def getNumberOfTentsNeeded(people:int) -> int:
-    NumberOfTents = math.ceil(people / 3)
+    NumberOfTents = math.ceil(people / NUMBER_OF_PEOPLE_FOR_ONE_TENT)
     return NumberOfTents
 
 def getTotalRentalCost(horses:int, tents:int) -> float:
