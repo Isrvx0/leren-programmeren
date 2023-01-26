@@ -109,12 +109,23 @@ def getItemsValueInGold(items:list) -> float:
         elif items[key]['price']['type'] =='platinum':
             amount =  platinum2gold(items[key]['price']['amount']) * items[key]['amount']
             value += amount
-    return (value)
+    return round(value,2)
 
 ##################### M04.D02.O8 #####################
 
 def getCashInGoldFromPeople(people:list) -> float:
-    pass
+    value= 0
+    for key in range (len(people)):
+        amount = people[key]['cash']['gold']
+        value += amount
+        amount = copper2gold( people[key]['cash']['copper']) 
+        value += amount
+        amount = silver2gold (people[key]['cash']['silver']) 
+        value += amount
+        amount =  platinum2gold(people[key]['cash']['platinum'])
+        value += amount
+    totaal = round(value,2)
+    return totaal
 
 ##################### M04.D02.O9 #####################
 
