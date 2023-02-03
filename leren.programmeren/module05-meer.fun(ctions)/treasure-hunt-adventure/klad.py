@@ -1,20 +1,52 @@
-from data import friends
-from functions import copper2gold , silver2gold , platinum2gold
+from functions import *
+from data import *
 
-def getCashInGoldFromPeople(people:list) -> float:
-    value= 0
-    for key in range (len(people)):
-        if people[key]['price']['type']=='gold':
-            amount = people[key]['cash']['gold'] * people[key]['price']['amount']
-            value += amount
-        if people[key]['price']['type']=='copper': 
-            amount = copper2gold( people[key]['cash']['copper'] ) * people[key]['price']['amount']
-            value += amount
-        if people[key]['price']['type'] =='silver':
-            amount = silver2gold (people[key]['cash']['silver']  * people[key]['price']['amount'])
-            value += amount
-        if people[key]['price']['type'] == 'platinum':
-            amount =  platinum2gold(people[key]['cash']['platinum']) * people[key]['price']['amount']
-            value += amount
-    totaal = round(value,2)
-    return totaal
+testGearList3 = [{
+    'amount' : 1,
+    'price' : {
+        'amount' : 2,
+        'type' : 'platinum'
+    }
+},{
+    'amount' : 5,
+    'price' : {
+        'amount' : 7,
+        'type' : 'silver'
+    }
+},{
+    'amount' : 19,
+    'price' : {
+        'amount' : 10,
+        'type' : 'copper'
+    }
+}]
+
+
+testInverstorsList3 = [{
+    'profitReturn' : 5,
+    'adventuring' : True
+},{
+    'profitReturn' : 9,
+    'adventuring' : True
+},{
+    'profitReturn' : 1,
+    'adventuring' : False
+}]
+
+
+print(getAdventuringInvestors(testInverstorsList3))
+print(getTotalInvestorsCosts(testInverstorsList3,testGearList3))
+print(getItemsValueInGold(testGearList3))
+
+copper = copper2gold(10) * 19
+silver = silver2gold(7) * 5
+platinum = platinum2gold(2) * 1
+totaal = platinum + silver + copper
+
+paarden = getNumberOfHorsesNeeded (2)
+tent = getNumberOfTentsNeeded(2)
+rent = getTotalRentalCost(paarden,tent)
+food = getJourneyFoodCostsInGold(2,paarden)
+cost = food + rent + totaal
+
+print(cost)

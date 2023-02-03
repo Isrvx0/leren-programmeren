@@ -61,10 +61,9 @@ def getAdventuringFriends(friends:list) -> list:
     newlist= []
     for teller in range (0,len(friends)):
         if friends[teller]['adventuring'] and friends[teller]['shareWith']: 
-            newlist.append(friends[teller]['name'])
+            newlist.append(friends[teller])
     return newlist 
-    # return getAdventuringPeople(friends) and getShareWithFriends(friends)
-    
+        
 ##################### M04.D02.O6 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
@@ -130,13 +129,25 @@ def getCashInGoldFromPeople(people:list) -> float:
 ##################### M04.D02.O9 #####################
 
 def getInterestingInvestors(investors:list) -> list:
-    pass
+    InterestingInvestors = []
+    for people in range(0,len(investors)):    
+        if investors[people]['profitReturn'] < 10:
+            InterestingInvestors.append(investors[people])
+    return InterestingInvestors
 
 def getAdventuringInvestors(investors:list) -> list:
-    pass
+    adventuringInvestors= []
+    for people in range (len(getInterestingInvestors(investors))):
+        if getInterestingInvestors(investors)[people]['adventuring'] :
+            adventuringInvestors.append(getInterestingInvestors(investors)[people])
+    return adventuringInvestors
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
-    pass
+    people= getAdventuringInvestors(investors)
+    rentalCost = getTotalRentalCost(1,1)
+    foodCost = getJourneyFoodCostsInGold(1,1)
+    totaal = (getItemsValueInGold(gear)  + rentalCost + foodCost) * len(people)
+    return totaal
 
 ##################### M04.D02.O10 #####################
 
