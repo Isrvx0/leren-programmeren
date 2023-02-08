@@ -1,52 +1,15 @@
 from functions import *
 from data import *
-
-testGearList3 = [{
-    'amount' : 1,
-    'price' : {
-        'amount' : 2,
-        'type' : 'platinum'
-    }
-},{
-    'amount' : 5,
-    'price' : {
-        'amount' : 7,
-        'type' : 'silver'
-    }
-},{
-    'amount' : 19,
-    'price' : {
-        'amount' : 10,
-        'type' : 'copper'
-    }
-}]
+import math
 
 
-testInverstorsList3 = [{
-    'profitReturn' : 5,
-    'adventuring' : True
-},{
-    'profitReturn' : 9,
-    'adventuring' : True
-},{
-    'profitReturn' : 1,
-    'adventuring' : False
-}]
 
+def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
+    # rekent uit hoeveel alle nachten samen die in een herberg gespendeerd worden kosten
+    people_cost = silver2gold(COST_INN_HUMAN_SILVER_PER_NIGHT) * people
+    horses_cost  = copper2gold(COST_INN_HORSE_COPPER_PER_NIGHT) * horses
+    herberg_cost = nightsInInn * (people_cost + horses_cost)
+    return herberg_cost
 
-print(getAdventuringInvestors(testInverstorsList3))
-print(getTotalInvestorsCosts(testInverstorsList3,testGearList3))
-print(getItemsValueInGold(testGearList3))
-
-copper = copper2gold(10) * 19
-silver = silver2gold(7) * 5
-platinum = platinum2gold(2) * 1
-totaal = platinum + silver + copper
-
-paarden = getNumberOfHorsesNeeded (2)
-tent = getNumberOfTentsNeeded(2)
-rent = getTotalRentalCost(paarden,tent)
-food = getJourneyFoodCostsInGold(2,paarden)
-cost = food + rent + totaal
-
-print(cost)
+# rekent uit hoevel nachten er maximaal in een herberg overnacht kan worden. 
+print(getJourneyInnCostsInGold(3,12,4))

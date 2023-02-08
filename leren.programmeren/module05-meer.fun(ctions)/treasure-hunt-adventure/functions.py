@@ -1,7 +1,7 @@
 import time
 import math
 from termcolor import colored
-from data import JOURNEY_IN_DAYS , COST_FOOD_HORSE_COPPER_PER_DAY , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_HORSE_SILVER_PER_DAY , COST_TENT_GOLD_PER_WEEK , NUMBER_OF_PEOPLE_FOR_ONE_HORSE , NUMBER_OF_PEOPLE_FOR_ONE_TENT
+from data import JOURNEY_IN_DAYS , COST_FOOD_HORSE_COPPER_PER_DAY , COST_FOOD_HUMAN_COPPER_PER_DAY , COST_HORSE_SILVER_PER_DAY , COST_TENT_GOLD_PER_WEEK , NUMBER_OF_PEOPLE_FOR_ONE_HORSE , NUMBER_OF_PEOPLE_FOR_ONE_TENT , COST_INN_HORSE_COPPER_PER_NIGHT , COST_INN_HUMAN_SILVER_PER_NIGHT
 
 ##################### M04.D02.O2 #####################
 
@@ -152,10 +152,21 @@ def getTotalInvestorsCosts(investors:list, gear:list) -> float:
 ##################### M04.D02.O10 #####################
 
 def getMaxAmountOfNightsInInn(leftoverGold:float, people:int, horses:int) -> int:
-    pass
+    people_cost = silver2gold(COST_INN_HUMAN_SILVER_PER_NIGHT) * people
+    horses_cost  = copper2gold(COST_INN_HORSE_COPPER_PER_NIGHT) * horses
+    herberg_cost = people_cost  + horses_cost
+    try:
+        maxNachten = leftoverGold // herberg_cost
+    except ZeroDivisionError: 
+        maxNachten = 0
+    return maxNachten
 
 def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
-    pass
+    # rekent uit hoeveel alle nachten samen die in een herberg gespendeerd worden kosten
+    people_cost = silver2gold(COST_INN_HUMAN_SILVER_PER_NIGHT) * people
+    horses_cost  = copper2gold(COST_INN_HORSE_COPPER_PER_NIGHT) * horses
+    herberg_cost = round(nightsInInn * (people_cost + horses_cost) , 2)
+    return herberg_cost
 
 ##################### M04.D02.O12 #####################
 
