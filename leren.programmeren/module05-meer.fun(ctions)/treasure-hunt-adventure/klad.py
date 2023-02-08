@@ -3,13 +3,17 @@ from data import *
 import math
 
 
+testInverstorsList2 = [{
+    'profitReturn' : 5,
+    'adventuring' : True
+},{
+    'profitReturn' : 15,
+    'adventuring' : True
+},{
+    'profitReturn' : 1,
+    'adventuring' : True
+}]
 
-def getJourneyInnCostsInGold(nightsInInn:int, people:int, horses:int) -> float:
-    # rekent uit hoeveel alle nachten samen die in een herberg gespendeerd worden kosten
-    people_cost = silver2gold(COST_INN_HUMAN_SILVER_PER_NIGHT) * people
-    horses_cost  = copper2gold(COST_INN_HORSE_COPPER_PER_NIGHT) * horses
-    herberg_cost = nightsInInn * (people_cost + horses_cost)
-    return herberg_cost
 
-# rekent uit hoevel nachten er maximaal in een herberg overnacht kan worden. 
-print(getJourneyInnCostsInGold(3,12,4))
+
+print(getAdventurerCut(150, [2.5, 1.9, 3.4, 12.3], 14)) #!= 9.28:
