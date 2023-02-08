@@ -26,7 +26,7 @@ testInverstorsList2 = [{
     'adventuring' : True
 },{
     'profitReturn' : 1,
-    'adventuring' : False #hier moet op True zijn en niet False
+    'adventuring' : False 
 }]
 
 if getInvestorsCuts(50, testInverstorsList2) != [2.5, 0.5]: 
