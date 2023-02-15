@@ -201,7 +201,7 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
     earnings = []
 
     # verdeel de uitkomsten
-    adventurCut = (profitGold -  sum(getInvestorsCuts(profitGold,investors)) ) / len(fellowship_adventurCut)
+    adventurCut = (profitGold - sum(getInvestorsCuts(profitGold,investors)) ) / len(fellowship_adventurCut)
     goudToAvonturier = len(adventuringFriends) * 10
 
     for index in range (len(fellowship)):
