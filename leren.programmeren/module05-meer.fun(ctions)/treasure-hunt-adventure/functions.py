@@ -130,16 +130,16 @@ def getCashInGoldFromPeople(people:list) -> float:
 
 def getInterestingInvestors(investors:list) -> list:
     InterestingInvestors = []
-    for people in range(0,len(investors)):    
-        if investors[people]['profitReturn'] < 10:
-            InterestingInvestors.append(investors[people])
+    for index in range(0,len(investors)):    
+        if investors[index]['profitReturn'] <= 10:
+            InterestingInvestors.append(investors[index])
     return InterestingInvestors
 
 def getAdventuringInvestors(investors:list) -> list:
     adventuringInvestors= []
-    for people in range (len(getInterestingInvestors(investors))):
-        if getInterestingInvestors(investors)[people]['adventuring'] :
-            adventuringInvestors.append(getInterestingInvestors(investors)[people])
+    for index in range (len(getInterestingInvestors(investors))):
+        if getInterestingInvestors(investors)[index]['adventuring'] :
+            adventuringInvestors.append(getInterestingInvestors(investors)[index])
     return adventuringInvestors
 
 def getTotalInvestorsCosts(investors:list, gear:list) -> float:
@@ -187,8 +187,54 @@ def getAdventurerCut(profitGold:float, investorsCuts:list, fellowship:list) -> f
 ##################### M04.D02.O13 #####################
 
 def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:list) -> list:
-    pass
+    # haal de juiste inhoud op
+    adventuringFriends = getAdventuringFriends(friends)
+    interestingInvestors = getInterestingInvestors(investors)
+    adventuringInvestors = getAdventuringInvestors(investors)
+    
+    aftrek_goud = 0
+    goudToAvonturier = 0.0
+    
+    #lijst maken 
+    fellowship = [mainCharacter] + friends + investors 
+    fellowship_adventurCut = [mainCharacter] + adventuringFriends + adventuringInvestors
+    earnings = []
 
+    # verdeel de uitkomsten
+    for teller in range (len(interestingInvestors)): #profitReturn aftrekken van de profitGold om te kunnen verdelen.
+         aftrek_goud += round(profitGold / 100 * interestingInvestors[teller][ 'profitReturn'],2)
+    
+    adventurCut = (profitGold -  aftrek_goud) / len(fellowship_adventurCut)
+    
+    for adventuring in  adventuringFriends:
+        goudToAvonturier += 10 #goud van adventuring Friends to mainCharacter
+
+    for index in range (len(fellowship)):
+        startCash = round(getPersonCashInGold(fellowship[index]['cash']),2)
+        if fellowship[index] in [mainCharacter]:
+            endCash = startCash + goudToAvonturier + adventurCut
+        elif fellowship[index] in investors:
+            if fellowship[index] in interestingInvestors and fellowship[index] in adventuringInvestors :
+                investorsGoud = round(profitGold / 100 * fellowship[index][ 'profitReturn'],2)
+                endCash = startCash + investorsGoud + adventurCut
+            elif fellowship[index] in interestingInvestors:
+                investorsGoud = round(profitGold / 100 * fellowship[index][ 'profitReturn'],2)
+                endCash = startCash + investorsGoud
+                # if fellowship[index] in adventuringInvestors:
+            else:
+                endCash = startCash
+        elif fellowship[index] in friends:
+            if fellowship[index] in adventuringFriends:
+                endCash = startCash + (adventurCut - 10)
+            else:
+                endCash = startCash 
+        earnings.append({
+                'name'   : fellowship[index]['name'],
+                'start'  : startCash,
+                'end'    : endCash
+            })
+    return earnings
+    
 ##################### view functions #####################
 def print_colorvars(txt:str='{}', vars:list=[], color:str='yellow') -> None:
     vars = map(lambda string, color=color: colored(str(string), color, attrs=['bold']) ,vars)
