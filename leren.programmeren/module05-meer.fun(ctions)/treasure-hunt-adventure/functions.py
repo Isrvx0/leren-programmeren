@@ -32,7 +32,7 @@ def getPersonCashInGold(personCash:dict) -> float:
             coin += silver2gold(value)
         elif key == 'copper':
             coin += copper2gold(value)
-    return coin
+    return round(coin,2)
 
 ##################### M04.D02.O4 #####################
 
@@ -67,7 +67,7 @@ def getAdventuringFriends(friends:list) -> list:
 ##################### M04.D02.O6 #####################
 
 def getNumberOfHorsesNeeded(people:int) -> int:
-    NumberOfHorses = round(people / NUMBER_OF_PEOPLE_FOR_ONE_HORSE)
+    NumberOfHorses = math.ceil(people / NUMBER_OF_PEOPLE_FOR_ONE_HORSE)
     return NumberOfHorses
 
 def getNumberOfTentsNeeded(people:int) -> int:
@@ -108,7 +108,8 @@ def getItemsValueInGold(items:list) -> float:
         elif items[key]['price']['type'] =='platinum':
             amount =  platinum2gold(items[key]['price']['amount']) * items[key]['amount']
             value += amount
-    return round(value,2)
+        totaal = round(value,2)
+    return totaal
 
 ##################### M04.D02.O8 #####################
 
@@ -192,42 +193,32 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
     interestingInvestors = getInterestingInvestors(investors)
     adventuringInvestors = getAdventuringInvestors(investors)
     
+    #variable 
     aftrek_goud = 0
     goudToAvonturier = 0.0
-    
-    #lijst maken 
     fellowship = [mainCharacter] + friends + investors 
     fellowship_adventurCut = [mainCharacter] + adventuringFriends + adventuringInvestors
     earnings = []
 
     # verdeel de uitkomsten
-    for teller in range (len(interestingInvestors)): #profitReturn aftrekken van de profitGold om te kunnen verdelen.
-         aftrek_goud += round(profitGold / 100 * interestingInvestors[teller][ 'profitReturn'],2)
-    
-    adventurCut = (profitGold -  aftrek_goud) / len(fellowship_adventurCut)
-    
-    for adventuring in  adventuringFriends:
-        goudToAvonturier += 10 #goud van adventuring Friends to mainCharacter
+    adventurCut = (profitGold -  sum(getInvestorsCuts(profitGold,investors)) ) / len(fellowship_adventurCut)
+    goudToAvonturier = len(adventuringFriends) * 10
 
     for index in range (len(fellowship)):
         startCash = round(getPersonCashInGold(fellowship[index]['cash']),2)
+        endCash = startCash
         if fellowship[index] in [mainCharacter]:
-            endCash = startCash + goudToAvonturier + adventurCut
+            endCash += goudToAvonturier + adventurCut
         elif fellowship[index] in investors:
             if fellowship[index] in interestingInvestors and fellowship[index] in adventuringInvestors :
                 investorsGoud = round(profitGold / 100 * fellowship[index][ 'profitReturn'],2)
-                endCash = startCash + investorsGoud + adventurCut
+                endCash += investorsGoud + adventurCut
             elif fellowship[index] in interestingInvestors:
                 investorsGoud = round(profitGold / 100 * fellowship[index][ 'profitReturn'],2)
-                endCash = startCash + investorsGoud
-                # if fellowship[index] in adventuringInvestors:
-            else:
-                endCash = startCash
+                endCash += investorsGoud
         elif fellowship[index] in friends:
             if fellowship[index] in adventuringFriends:
-                endCash = startCash + (adventurCut - 10)
-            else:
-                endCash = startCash 
+                endCash += (adventurCut - 10)
         earnings.append({
                 'name'   : fellowship[index]['name'],
                 'start'  : round(startCash,2),
