@@ -230,8 +230,8 @@ def getEarnigs(profitGold:float, mainCharacter:dict, friends:list, investors:lis
                 endCash = startCash 
         earnings.append({
                 'name'   : fellowship[index]['name'],
-                'start'  : startCash,
-                'end'    : endCash
+                'start'  : round(startCash,2),
+                'end'    : round(endCash,2)
             })
     return earnings
     
