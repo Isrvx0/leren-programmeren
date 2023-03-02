@@ -32,7 +32,6 @@ def stap_3(aantal):
     extra = input(f'Dan krijgt u van mij een bakje met {aantal} bolletjes\nWilt u nog meer bestellen?  ')
     if extra.lower() in ("stop" , "nee"):
         sys.exit("Bedankt en tot ziens! ")
-
     else:
         return stap_1()
 
