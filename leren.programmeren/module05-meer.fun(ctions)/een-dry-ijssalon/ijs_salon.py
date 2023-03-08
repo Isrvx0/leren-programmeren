@@ -1,4 +1,4 @@
 from functions import *
 
 print(start_function())
-print(stap_1())
+print(vraag_naar_aantal())
