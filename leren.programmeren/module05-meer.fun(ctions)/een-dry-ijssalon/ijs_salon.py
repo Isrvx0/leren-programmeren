@@ -1,4 +1,4 @@
 from functions import *
 
-print(start_function())
+print(welkom_message())
 print(vraag_naar_aantal())
