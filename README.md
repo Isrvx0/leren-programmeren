@@ -1,10 +1,13 @@
 # ✎ plan for today :) // 10-03-2023:
 #	: ̗̀➛ ijs salon functions verbeteren.
+#	: ̗̀➛ ckv 21 van python.
+#	: ̗̀➛ ckv 2 van JavaScript.
 #	: ̗̀➛ Horeca aap function verbeteren.
 #	: ̗̀➛ werken aan HTML (Realiseer Desktop versie)
 
 # ✔ What i did:
-#	༊*·˚
+#	༊*·˚ Horeca aap opnieuw gemaakt.
+#	༊*·˚ ijs salon functions opnieuw gemaakt.
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
