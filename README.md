@@ -1,3 +1,11 @@
+# ✎ plan for today :) // 11-03-2023:
+#	: ̗̀➛ HTML Desktop Realiseren.
+
+# ✔ What i did:
+#	༊*·˚ 
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
+
 # ✎ plan for today :) // 10-03-2023:
 #	: ̗̀➛ ijs salon functions verbeteren.
 #	: ̗̀➛ ckv 21 van python.
