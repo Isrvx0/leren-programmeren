@@ -3,11 +3,13 @@
 #	: ̗̀➛ ckv 21 van python.
 #	: ̗̀➛ ckv 2 van JavaScript.
 #	: ̗̀➛ Horeca aap function verbeteren.
-#	: ̗̀➛ werken aan HTML (Realiseer Desktop versie)
+#	: ̗̀➛ werken aan HTML (Realiseer Desktop versie) // had geen genoeg tijd :>
 
 # ✔ What i did:
 #	༊*·˚ Horeca aap opnieuw gemaakt.
 #	༊*·˚ ijs salon functions opnieuw gemaakt.
+#	༊*·˚ ckv 2 van JavaScript.
+#	༊*·˚ ckv 21 van python.
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
