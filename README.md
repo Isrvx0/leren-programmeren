@@ -1,8 +1,16 @@
+# ✎ plan for today :) // 14-03-2023:
+#	: ̗̀➛ HTML Desktop Realiseren (proberen af te krijgen).
+
+# ✔ What i did:
+#	༊*·˚  HTML Desktop Af gemaakt !.
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
+
 # ✎ plan for today :) // 11-03-2023:
 #	: ̗̀➛ HTML Desktop Realiseren.
 
 # ✔ What i did:
-#	༊*·˚ 
+#	༊*·˚ mainpage van de persoonlijk web aangepast
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
