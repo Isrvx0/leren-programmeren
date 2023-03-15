@@ -3,7 +3,7 @@ def welkom_message():
     return welkom_message
 
 
-def hoeveelheid_vragen():
+def bolletjes():
     aantal_bolletjes = " " 
     while type(aantal_bolletjes) != int:
         try:
@@ -12,23 +12,51 @@ def hoeveelheid_vragen():
             print('Sorry dat snap ik niet!' )
     return aantal_bolletjes
 
-def keuze_maken(aantal):
-    choice = True
-    while choice:
-        keuze = input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
-        if  keuze.lower() in ("hoorntje" , "bakje"):
-            print(f"Dan krijgt u van mij een {keuze} met {aantal} bolletjes\n")
-            choice = False
-        else:
+def bakjes():
+    aantal_bakjes = " " 
+    while type(aantal_bakjes) != int:
+        try:
+            aantal_bakjes= int(input("Hoeveel bakjes wilt u?"))
+        except ValueError:
             print('Sorry dat snap ik niet!' )
-    return keuze
+    return aantal_bakjes
+
+def hoorntjes():
+    aantal_hoorntjes = " " 
+    while type(aantal_hoorntjes) != int:
+        try:
+            aantal_hoorntjes = int(input("Hoeveel hoorntjes wilt u?"))
+        except ValueError:
+            print('Sorry dat snap ik niet!' )
+    return aantal_hoorntjes
 
 def buy_more():
     extra = input('Wilt u nog meer bestellen?  ')
     return extra 
 
 
+def bonnetje(bolletjes , hoorntjes , bakjes):
+    bon = [{
+        "Bolletjes  " : f"{bolletjes} * €1.10 = {(bolletjes * 1.10)}"
+    },{
+        "Hoorntjes  " : f"{hoorntjes} * €1.25 = {(hoorntjes * 1.25)}"
+    },{
+        "Bakjes     " : f"{bakjes} * €0.75 = {(bakjes * 0.75)}"
+    },{
+        f"Totaal = € {(bolletjes * 1.10 + hoorntjes * 1.25 + bakjes * 0.75 )}"
+    }]
+    return bon
 
+
+#     print ('[------BOODSCHAPENLIJST------')
+# print("{:<10} {:<10} ".format('ITEMS', 'HOEVEELHEID')) #namen van de kolommen.
+# for key, value in boodschappen_lijst.items(): # print elk gegevens-item.
+#     print("{:<10} {:<10}".format(key, value))  # (:<10) = Hoe ver uit elkaar.  
+
+
+
+# print(myList[0]['bar'])
+# bon = {"bier":{naam: "bier",prijs: 2.50, amount: 0} , "wijn":{naam: "wijn",prijs: 3.75,amount: 0},"fris":{naam: "fris",prijs: 1.65,amount: 0}}
 
 
 
