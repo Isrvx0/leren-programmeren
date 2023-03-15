@@ -1,10 +1,9 @@
 # ✎ plan for today :) // 15-03-2023:
 #	: ̗̀➛ HTML       -> ckv.7 vragen.
 #	: ̗̀➛ Python     -> M05.PA.O3 - Feature #01 - Een bonnetje.
-#	: ̗̀➛ JavaScript -> M02.O1 - Buttons 1.0
 
 # ✔ What i did:
-#	༊*·˚ 
+#	༊*·˚ python had niet kunnen af omdat ik een vraagje had over de opd
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 # ✎ plan for today :) // 14-03-2023:
