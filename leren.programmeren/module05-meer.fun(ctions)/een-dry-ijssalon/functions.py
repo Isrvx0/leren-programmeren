@@ -7,10 +7,32 @@ def hoeveelheid_vragen():
     aantal_bolletjes = " " 
     while type(aantal_bolletjes) != int:
         try:
-            aantal_bolletjes = int(input("Hoeveel bolletjes wilt u?"))
+            aantal_bolletjes = int(input("Hoeveel bolletjes wilt u?  "))
         except ValueError:
             print('Sorry dat snap ik niet!' )
     return aantal_bolletjes
+
+def smaak_kiezen(aantal):
+    nummer = 1
+    smaken_list = [{ 'name' : 'aardbei', 'amount' : 0},{ 'name' : 'chocolade', 'amount' : 0},{ 'name' : 'munt', 'amount' : 0},{ 'name' : 'vanille', 'amount' : 0}]
+
+    while nummer <= aantal: 
+        smaak = input( f"Welke smaak wilt u voor bolletje nummer {nummer}?\nA) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
+        if smaak.lower() in ("aardbei","chocolade","munt","vanille"):
+            nummer += 1
+            for index in range (len(smaken_list)):
+                if smaken_list[index]['name'] == smaak:
+                    smaken_list[index]['amount'] += 1            
+        else:
+            print("Sorry! Dat snap ik niet... ")
+
+    # check if an items == 0
+    for smaak in smaken_list:
+        if smaak['amount'] == 0:
+            smaken_list.remove(smaak) 
+
+    return smaken_list
+
 
 def keuze_maken(aantal):
     choice = True
@@ -28,32 +50,39 @@ def buy_more():
     extra = input('Wilt u nog meer bestellen?  ')
     return extra 
 
-def bonnetje(bolletjes , hoorntjes , bakjes):
-    bon = [{
-        "Bolletjes  " : f"{bolletjes}  * €1.10 = €{(bolletjes * 1.10)}"
-    },{
-        "Hoorntjes  " : f"{hoorntjes}  * €1.25 = €{(hoorntjes * 1.25)}"
-    },{
-        "Bakjes     " : f"{bakjes}  * €0.75 = €{(bakjes * 0.75)}"
-    },{
-        f"Totaal      = € {(bolletjes * 1.10 + hoorntjes * 1.25 + bakjes * 0.75 )}"
-    }]
-    return bon
+# def bonnetje(bolletjes , hoorntjes , bakjes):
+#     bon = [{
+#         "Bolletjes  " : f"{bolletjes}  * €1.10 = €{round(bolletjes * 1.10 , 2)}"
+#     },{
+#         "Hoorntjes  " : f"{hoorntjes}  * €1.25 = €{round(hoorntjes * 1.25 ,2)}"
+#     },{
+#         "Bakjes     " : f"{bakjes}  * €0.75 = €{round(bakjes * 0.75 ,2)}"
+#     },{
+#         f"Totaal      = € {round(bolletjes * 1.10 + hoorntjes * 1.25 + bakjes * 0.75 ,2)}"
+#     }]
+    
+#     # check if an items == 0
+#     if bakjes == 0:
+#         bon.remove(bon[2])
+#     elif hoorntjes == 0:
+#         bon.remove(bon[1])
+    
+#     return bon
+
+
+def bonnetje(smaken_lijst , bolletjes , hoorntjes , bakjes):
+    lijst = [{ 'name' : 'bakjes', 'amount' : bakjes, 'price' : 1.70},
+             { 'name' : 'hoorntjes', 'amount' : hoorntjes, 'price' : 1.70 }]
+    for item in lijst:
+        if item['amount'] == 0:
+            lijst.remove(item) 
+    bon = smaken_lijst + lijst
 
 
 
 
 
 
-#     print ('[------BOODSCHAPENLIJST------')
-# print("{:<10} {:<10} ".format('ITEMS', 'HOEVEELHEID')) #namen van de kolommen.
-# for key, value in boodschappen_lijst.items(): # print elk gegevens-item.
-#     print("{:<10} {:<10}".format(key, value))  # (:<10) = Hoe ver uit elkaar.  
-
-
-
-# print(myList[0]['bar'])
-# bon = {"bier":{naam: "bier",prijs: 2.50, amount: 0} , "wijn":{naam: "wijn",prijs: 3.75,amount: 0},"fris":{naam: "fris",prijs: 1.65,amount: 0}}
 
 
 
@@ -65,35 +94,25 @@ def bonnetje(bolletjes , hoorntjes , bakjes):
 
 
 
-# def vraag_naar_aantal(aantal_bolletjes):
-#     try:
-#         aantal_bolletjes = int(input("Hoeveel bolletjes wilt u?   "))
-#         if aantal_bolletjes <= 3:
-#             return_variable = keuze_maken(aantal_bolletjes)
-#         elif aantal_bolletjes >= 4 and aantal_bolletjes <= 8:
-#             return_variable =  meer_bestellen(aantal_bolletjes)
-#         elif aantal_bolletjes > 8:
-#             print('Sorry, zulke grote bakken hebben we niet')
-#             return_variable =  vraag_naar_aantal()
-#     except ValueError:
-#         print('Sorry dat snap ik niet!' )
-#         return_variable =  vraag_naar_aantal()
-#     return return_variable
 
-# def keuze_maken(aantal):
-#     keuze= input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
-#     if keuze.lower() in ('bakje' , 'hoorntje') :
-#        return_variable = meer_bestellen(aantal)
-#     else:
-#         print('Sorry dat snap ik niet!' )
-#         return_variable =  keuze_maken(aantal)
-#     return return_variable 
 
-# def meer_bestellen(aantal):
-#     extra = input(f'Dan krijgt u van mij een bakje met {aantal} bolletjes\nWilt u nog meer bestellen?  ')
-#     if extra.lower() in ("stop" , "nee"):
-#         print("Bedankt en tot ziens! ")
-#         exit()
-#     else:
-#         return_variable = vraag_naar_aantal()
-#     return return_variable 
+#     bon = []
+#     for index in range (len(lijst)):
+#         bon.append(f'{lijst[index]["name"]}' + f'{lijst[index]["amount"]} * 1,10 = €{round(lijst[index]["amount"] * 1.10 , 2)}')
+        
+#     bon = [{
+#         "Hoorntjes  " : f"{hoorntjes}  * €1.25 = €{round(hoorntjes * 1.25 ,2)}"
+#     },{
+#         "Bakjes     " : f"{bakjes}  * €0.75 = €{round(bakjes * 0.75 ,2)}"
+#     },{
+#         f"Totaal      = € {round(bolletjes * 1.10 + hoorntjes * 1.25 + bakjes * 0.75 ,2)}"
+#     }]
+
+    
+#     # check if an items == 0
+#     if bakjes == 0:
+#         bon.remove(bon[-2])
+#     elif hoorntjes == 0:
+#         bon.remove(bon[-2])
+    
+#     return bon
