@@ -8,9 +8,10 @@
 #	: ̗̀➛ JavaScript -> M02.O1 - Buttons 1.0 + M02.O2.
 
 # ✔ What i did:
-#	༊*·˚ Python     -> flowchart gemaakt 
+#	༊*·˚ Python     -> flowchart gemaakt  M05.PA.O3
+#	༊*·˚ Python     -> flowchart verbetert  M05.PA.O4
 #	༊*·˚ Python     -> code aangepast
-
+#	༊*·˚ HTML       -> website verbetert
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
