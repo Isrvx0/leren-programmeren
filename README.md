@@ -6,6 +6,7 @@
 
 # ✔ What i did:
 #	༊*·˚ Python     -> flowchart gemaakt 
+#	༊*·˚ Python     -> code aangepast
 
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
