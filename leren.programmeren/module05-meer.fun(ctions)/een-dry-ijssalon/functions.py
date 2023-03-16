@@ -1,9 +1,9 @@
-def welkom_message():
+def welcome_message():
     welkom_message = "Welkom bij Papi Gelato. Je mag alle smaken kiezen zolang het maar vanille ijs is\n"
     return welkom_message
 
 
-def bolletjes():
+def hoeveelheid_vragen():
     aantal_bolletjes = " " 
     while type(aantal_bolletjes) != int:
         try:
@@ -12,40 +12,37 @@ def bolletjes():
             print('Sorry dat snap ik niet!' )
     return aantal_bolletjes
 
-def bakjes():
-    aantal_bakjes = " " 
-    while type(aantal_bakjes) != int:
-        try:
-            aantal_bakjes= int(input("Hoeveel bakjes wilt u?"))
-        except ValueError:
+def keuze_maken(aantal):
+    choice = True
+    while choice:
+        keuze = input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
+        if  keuze.lower() in ("hoorntje" , "bakje"):
+            print(f"Dan krijgt u van mij een {keuze} met {aantal} bolletjes\n")
+            choice = False
+        else:
             print('Sorry dat snap ik niet!' )
-    return aantal_bakjes
+    return keuze
 
-def hoorntjes():
-    aantal_hoorntjes = " " 
-    while type(aantal_hoorntjes) != int:
-        try:
-            aantal_hoorntjes = int(input("Hoeveel hoorntjes wilt u?"))
-        except ValueError:
-            print('Sorry dat snap ik niet!' )
-    return aantal_hoorntjes
 
 def buy_more():
     extra = input('Wilt u nog meer bestellen?  ')
     return extra 
 
-
 def bonnetje(bolletjes , hoorntjes , bakjes):
     bon = [{
-        "Bolletjes  " : f"{bolletjes} * €1.10 = {(bolletjes * 1.10)}"
+        "Bolletjes  " : f"{bolletjes}  * €1.10 = €{(bolletjes * 1.10)}"
     },{
-        "Hoorntjes  " : f"{hoorntjes} * €1.25 = {(hoorntjes * 1.25)}"
+        "Hoorntjes  " : f"{hoorntjes}  * €1.25 = €{(hoorntjes * 1.25)}"
     },{
-        "Bakjes     " : f"{bakjes} * €0.75 = {(bakjes * 0.75)}"
+        "Bakjes     " : f"{bakjes}  * €0.75 = €{(bakjes * 0.75)}"
     },{
-        f"Totaal = € {(bolletjes * 1.10 + hoorntjes * 1.25 + bakjes * 0.75 )}"
+        f"Totaal      = € {(bolletjes * 1.10 + hoorntjes * 1.25 + bakjes * 0.75 )}"
     }]
     return bon
+
+
+
+
 
 
 #     print ('[------BOODSCHAPENLIJST------')
