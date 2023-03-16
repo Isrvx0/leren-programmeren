@@ -13,26 +13,21 @@ while extra_bestellen:
     if aantal_bolletjes <= 8:
         bolletjes += aantal_bolletjes 
         smaken_lijst = smaak_kiezen(aantal_bolletjes)
-        if aantal_bolletjes <= 3:
-            keuze = keuze_maken(aantal_bolletjes)
-            if keuze == "hoorntje":
-                hoorntjes += 1
-            else:
-                bakjes += 1
+        
+        keuze = keuze_maken(aantal_bolletjes)
+        if keuze == "hoorntje":
+            hoorntjes += 1
         else:
-            print(f"Dan krijgt u van mij een bakje met {aantal_bolletjes} bolletjes\n")
             bakjes += 1
 
         meer_bestellen = buy_more()
         if meer_bestellen.lower() in ( "stop" , "nee"):
             print("Bedankt en tot ziens! ")
             #print(bonnetje(bolletjes , hoorntjes, bakjes))
-            bon = bonnetje(bolletjes , hoorntjes, bakjes)
+            bon = bonnetje(smaken_lijst,bolletjes , hoorntjes, bakjes)
             print("--------------['Papi Gelato']--------------")
             for item in bon:
                 print(item)
-                if item == 0:
-                    print('hello')
             extra_bestellen = False
     
     elif aantal_bolletjes > 8:

@@ -13,18 +13,21 @@ def hoeveelheid_vragen():
     return aantal_bolletjes
 
 def smaak_kiezen(aantal):
-    nummer = 1
-    smaken_list = [{ 'name' : 'aardbei', 'amount' : 0},{ 'name' : 'chocolade', 'amount' : 0},{ 'name' : 'munt', 'amount' : 0},{ 'name' : 'vanille', 'amount' : 0}]
+    choice = True
+    teller = 1
+    smaken_list = [{'name' : 'aardbei', 'amount' : 0, 'price' : 1.10},{ 'name' : 'chocolade', 'amount' : 0, 'price' : 1.10},{ 'name' : 'munt', 'amount' : 0, 'price' : 1.10},{'name' : 'vanille', 'amount' : 0, 'price' : 1.10}]
 
-    while nummer <= aantal: 
-        smaak = input( f"Welke smaak wilt u voor bolletje nummer {nummer}?\nA) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
+    while choice:
+        smaak = input( f"Welke smaak wilt u voor bolletje nummer {teller}?\nA) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
         if smaak.lower() in ("aardbei","chocolade","munt","vanille"):
-            nummer += 1
-            for index in range (len(smaken_list)):
-                if smaken_list[index]['name'] == smaak:
-                    smaken_list[index]['amount'] += 1            
+            teller += 1
+            for element in smaken_list:
+                if element['name'] == smaak:
+                    element['amount'] += 1            
         else:
             print("Sorry! Dat snap ik niet... ")
+        if teller == aantal:
+            choice= False
 
     # check if an items == 0
     for smaak in smaken_list:
@@ -37,10 +40,13 @@ def smaak_kiezen(aantal):
 def keuze_maken(aantal):
     choice = True
     while choice:
-        keuze = input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
-        if  keuze.lower() in ("hoorntje" , "bakje"):
-            print(f"Dan krijgt u van mij een {keuze} met {aantal} bolletjes\n")
-            choice = False
+        if aantal >= 4 and aantal <= 8:
+            print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes\n")
+        elif aantal <= 3:
+            keuze = input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
+            if  keuze.lower() in ("hoorntje" , "bakje"):
+                print(f"Dan krijgt u van mij een {keuze} met {aantal} bolletjes\n")
+                choice = False
         else:
             print('Sorry dat snap ik niet!' )
     return keuze
@@ -49,6 +55,37 @@ def keuze_maken(aantal):
 def buy_more():
     extra = input('Wilt u nog meer bestellen?  ')
     return extra 
+
+
+def bonnetje(smaken_lijst , bolletjes , hoorntjes , bakjes):
+    totaal_prijs = 0
+    bon = []
+    lijst = [{ 'name' : 'bakjes', 'amount' : bakjes, 'price' : 0.75},
+             { 'name' : 'hoorntjes', 'amount' : hoorntjes, 'price' : 1.25 }]
+    
+    for element in lijst:
+        if element['amount'] == 0:
+            lijst.remove(element) 
+    
+    bestellen = list(smaken_lijst + lijst)
+    for item in bestellen:
+        price = item["amount"] * item["price"] 
+        totaal_prijs += price
+        bon.append(f'{item["name"]}   :    {item["amount"]} * €{item["price"]}     = €{round(price ,2)}')
+    
+    bon.append(f"totaal =     €{round(totaal_prijs + (bolletjes * 1.10),2)}")
+    return bon
+
+
+
+
+
+
+
+
+
+
+
 
 # def bonnetje(bolletjes , hoorntjes , bakjes):
 #     bon = [{
@@ -70,15 +107,17 @@ def buy_more():
 #     return bon
 
 
-def bonnetje(smaken_lijst , bolletjes , hoorntjes , bakjes):
-    lijst = [{ 'name' : 'bakjes', 'amount' : bakjes, 'price' : 1.70},
-             { 'name' : 'hoorntjes', 'amount' : hoorntjes, 'price' : 1.70 }]
-    for item in lijst:
-        if item['amount'] == 0:
-            lijst.remove(item) 
-    bon = smaken_lijst + lijst
+# for index in range (0,len(smaken_list)):
+#     name.append(smaken_list[index]['name'])
 
+# for index in range (0,len(smaken_list)):
+#     aantal.append(smaken_list[index]['amount'])
 
+# for index in range (0,len(smaken_list)):
+#     price.append(smaken_list[index]['price'])
+
+# for name,aantal,price in zip(name,aantal,price):
+#     print('{:10} {:10} {:5}'.format(name,aantal,price))
 
 
 
