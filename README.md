@@ -5,7 +5,8 @@
 #	: ̗̀➛ JavaScript -> M02.O1 - Buttons 1.0 + M02.O2.
 
 # ✔ What i did:
-#	༊*·˚
+#	༊*·˚ Python     -> flowchart gemaakt 
+
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
