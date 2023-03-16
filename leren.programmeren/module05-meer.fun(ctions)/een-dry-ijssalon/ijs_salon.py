@@ -10,10 +10,10 @@ hoorntjes = 0
 extra_bestellen = True
 while extra_bestellen:
     aantal_bolletjes = hoeveelheid_vragen()
+    
     if aantal_bolletjes <= 8:
         bolletjes += aantal_bolletjes 
         smaken_lijst = smaak_kiezen(aantal_bolletjes)
-        
         keuze = keuze_maken(aantal_bolletjes)
         if keuze == "hoorntje":
             hoorntjes += 1

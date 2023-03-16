@@ -14,27 +14,31 @@ def hoeveelheid_vragen():
 
 def smaak_kiezen(aantal):
     choice = True
-    teller = 1
-    smaken_list = [{'name' : 'aardbei', 'amount' : 0, 'price' : 1.10},{ 'name' : 'chocolade', 'amount' : 0, 'price' : 1.10},{ 'name' : 'munt', 'amount' : 0, 'price' : 1.10},{'name' : 'vanille', 'amount' : 0, 'price' : 1.10}]
+    teller = 0
+    smaken_lijst = []
+    
+    lijst = [{'name' : 'aardbei', 'amount' : 0, 'price' : 1.10},{ 'name' : 'chocolade', 'amount' : 0, 'price' : 1.10},{ 'name' : 'munt', 'amount' : 0, 'price' : 1.10},{'name' : 'vanille', 'amount' : 0, 'price' : 1.10}]
 
     while choice:
-        smaak = input( f"Welke smaak wilt u voor bolletje nummer {teller}?\nA) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
+        smaak = input( f"Welke smaak wilt u voor bolletje nummer {teller+1}?\nA) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
         if smaak.lower() in ("aardbei","chocolade","munt","vanille"):
             teller += 1
-            for element in smaken_list:
+            for element in lijst:
                 if element['name'] == smaak:
-                    element['amount'] += 1            
+                    element['amount'] += 1 
+                           
         else:
             print("Sorry! Dat snap ik niet... ")
         if teller == aantal:
             choice= False
 
     # check if an items == 0
-    for smaak in smaken_list:
-        if smaak['amount'] == 0:
-            smaken_list.remove(smaak) 
+    for smaak in lijst:
+        if smaak['amount'] > 0:
+            smaken_lijst.append(smaak) 
 
-    return smaken_list
+    return smaken_lijst
+
 
 
 def keuze_maken(aantal):
@@ -42,6 +46,7 @@ def keuze_maken(aantal):
     while choice:
         if aantal >= 4 and aantal <= 8:
             print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes\n")
+            keuze = "bakje"
         elif aantal <= 3:
             keuze = input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
             if  keuze.lower() in ("hoorntje" , "bakje"):
@@ -66,14 +71,14 @@ def bonnetje(smaken_lijst , bolletjes , hoorntjes , bakjes):
     for element in lijst:
         if element['amount'] == 0:
             lijst.remove(element) 
-    
     bestellen = list(smaken_lijst + lijst)
+    space = " "
     for item in bestellen:
         price = item["amount"] * item["price"] 
         totaal_prijs += price
-        bon.append(f'{item["name"]}   :    {item["amount"]} * €{item["price"]}     = €{round(price ,2)}')
+        bon.append(f'{item["name"]}{space*10}:{space*10}{item["amount"]} * €{item["price"]}{space*10}= €{round(price ,2)}')
     
-    bon.append(f"totaal =     €{round(totaal_prijs + (bolletjes * 1.10),2)}")
+    bon.append(f"totaal ={space*10}€{round(totaal_prijs + (bolletjes * 1.10),2)}")
     return bon
 
 
