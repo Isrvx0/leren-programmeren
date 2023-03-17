@@ -6,7 +6,7 @@
 # ✔ What i did:
 #	༊*·˚ Python     -> code af-gemaakt M05.PA.O4
 #	༊*·˚ JavaScript -> informatie gekregen over button 
-#	༊*·˚ HTML       -> Was geen tijd genoeg voor ckv
+#	༊*·˚ HTML       -> ckv.7
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
