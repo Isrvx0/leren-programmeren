@@ -1,5 +1,5 @@
 def welcome_message():
-    welkom_message = "Welkom bij Papi Gelato. Je mag alle smaken kiezen zolang het maar vanille ijs is\n"
+    welkom_message = "Welkom bij Papi Gelato\n"
     return welkom_message
 
 
