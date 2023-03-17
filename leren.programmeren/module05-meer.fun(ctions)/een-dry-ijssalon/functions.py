@@ -39,14 +39,13 @@ def smaak_kiezen(aantal):
 
     return smaken_lijst
 
-
-
 def keuze_maken(aantal):
     choice = True
     while choice:
         if aantal >= 4 and aantal <= 8:
             print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes\n")
             keuze = "bakje"
+            choice = False
         elif aantal <= 3:
             keuze = input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
             if  keuze.lower() in ("hoorntje" , "bakje"):

@@ -1,3 +1,14 @@
+# ✎ plan for today :) // 17-03-2023:
+#	: ̗̀➛ HTML       -> ckv.7 vragen. + verder werken aan de opdrachten.
+#	: ̗̀➛ Python     -> M05.PA.O4 - Feature #02 - 3 Nieuwe smaken // code aanpasen
+
+# ✔ What i did:
+#	༊*·˚ Python     -> code af-gemaakt M05.PA.O4
+#	༊*·˚ JavaScript -> informatie gekregen over button 
+#	༊*·˚ HTML       -> Was geen tijd genoeg voor ckv
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
+
 # ✎ plan for today :) // 16-03-2023:
 #	: ̗̀➛ Python     -> M05.PA.O3 - Feature #01 - Een bonnetje // flowchart maken
 #	: ̗̀➛ Python     -> M05.PA.O3 - Feature #01 - Een bonnetje // code aanpasen 
