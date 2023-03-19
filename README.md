@@ -1,3 +1,14 @@
+# ✎ plan for today :) // 19-03-2023:
+#	: ̗̀➛ Python     -> M05.PA.O6 - Feature #03 - Toppings // code aanpasen
+#	: ̗̀➛ Python     -> M05.PA.O6 - Feature #03 - Toppings // update flowchart
+
+#	: ̗̀➛ JavaScript -> M02.O1 - Buttons 1.0 + M02.O2.
+
+# ✔ What i did:
+#	༊*·˚ 
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
+
 # ✎ plan for today :) // 17-03-2023:
 #	: ̗̀➛ HTML       -> ckv.7 vragen. + verder werken aan de opdrachten.
 #	: ̗̀➛ Python     -> M05.PA.O4 - Feature #02 - 3 Nieuwe smaken // code aanpasen
