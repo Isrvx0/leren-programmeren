@@ -42,30 +42,72 @@ def smaak_kiezen(aantal):
 def keuze_maken(aantal):
     choice = True
     while choice:
-        if aantal >= 4 and aantal <= 8:
-            print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes\n")
-            keuze = "bakje"
-            choice = False
-        elif aantal <= 3:
+        if aantal <= 3:
             keuze = input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
             if  keuze.lower() in ("hoorntje" , "bakje"):
                 print(f"Dan krijgt u van mij een {keuze} met {aantal} bolletjes\n")
                 choice = False
+            else:
+                print('Sorry dat snap ik niet!' )
+        elif aantal >= 4 and aantal <= 8:
+            print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes\n")
+            keuze = "bakje"
+            choice = False
+        elif aantal > 8:
+            print('Sorry, zulke grote bakken hebben we niet')
         else:
             print('Sorry dat snap ik niet!' )
     return keuze
 
+def topping_kiezen():
+    topping = True
+    while topping:
+        choice = input("Wat voor topping wilt u: \nA) Geen, B) Slagroom, C) Sprinkels of D) Caramel Saus?")
+        if choice.lower() in ("a","b","c","d"):
+            if choice == "a":
+                choice = "Geen"
+            elif choice == "b":
+                choice = "Slagroom"
+            elif choice == "c":
+                choice = "Sprinkels"
+            elif choice == "d":
+                choice = "Caramel Saus"
+            topping = False
+        else:
+            print("sorry dat snap ik niet")
+    return choice
+
+def topping_prijs(gekozen_topping , bolletjes , hoorntje_bakje):
+    if gekozen_topping == "Geen":
+        price = 0
+    elif gekozen_topping == "Slagroom":
+        price = 0.50
+    elif gekozen_topping == "Sprinkels":
+        price = 0.30 * bolletjes
+    elif gekozen_topping == "Caramel Saus":
+        if hoorntje_bakje == "bakje":
+            price = 0.90
+        elif hoorntje_bakje == "hoorntje":
+            price = 0.60
+    return price
 
 def buy_more():
     extra = input('Wilt u nog meer bestellen?  ')
     return extra 
 
 
-def bonnetje(smaken_lijst , bolletjes , hoorntjes , bakjes):
+def bonnetje(smaken_lijst,topping,bolletjes , hoorntjes , bakjes):
     totaal_prijs = 0
     bon = []
-    lijst = [{ 'name' : 'bakjes', 'amount' : bakjes, 'price' : 0.75},
-             { 'name' : 'hoorntjes', 'amount' : hoorntjes, 'price' : 1.25 }]
+    lijst = [{ 'name' : 'Aardbei', 'amount' : aardbei, 'price' : 1.10},
+             { 'name' : 'Chocolade', 'amount' : chocolade, 'price' : 1.10},
+             { 'name' : 'Vanille', 'amount' : vanille, 'price' : 1.10 },
+             { 'name' : 'Munt', 'amount' : munt, 'price' : 1.10 },
+             { 'name' : 'hoorntjes', 'amount' : hoorntjes, 'price' : 1.25 },
+             { 'name' : 'bakjes', 'amount' : bakjes, 'price' : 0.75},
+             { 'name' : 'topping', 'amount' : topping, 'price' : topping_prijs }]
+    
+    
     
     for element in lijst:
         if element['amount'] == 0:
@@ -83,9 +125,7 @@ def bonnetje(smaken_lijst , bolletjes , hoorntjes , bakjes):
 
 
 
-
-
-
+("aardbei","chocolade","munt","vanille")
 
 
 
