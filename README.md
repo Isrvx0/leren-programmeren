@@ -1,6 +1,7 @@
 # ✎ plan for today :) // 19-03-2023:
 #	: ̗̀➛ Python     -> M05.PA.O6 - Feature #03 - Toppings // code aanpasen
 #	: ̗̀➛ Python     -> M05.PA.O6 - Feature #03 - Toppings // update flowchart
+#	: ̗̀➛ Python     -> M05.PA.O7 - Project update
 
 #	: ̗̀➛ JavaScript -> M02.O1 - Buttons 1.0 + M02.O2.
 
