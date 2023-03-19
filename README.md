@@ -3,10 +3,10 @@
 #	: ̗̀➛ Python     -> M05.PA.O6 - Feature #03 - Toppings // update flowchart
 #	: ̗̀➛ Python     -> M05.PA.O7 - Project update
 
-#	: ̗̀➛ JavaScript -> M02.O1 - Buttons 1.0 + M02.O2.
-
 # ✔ What i did:
-#	༊*·˚ 
+#	༊*·˚ Python     -> code af-gemaakt M05.PA.O6 
+#	༊*·˚ Python     -> cflowchart update M05.PA.O6
+#	༊*·˚ Python     -> Project update M05.PA.O7
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
