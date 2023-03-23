@@ -1,6 +1,6 @@
 # ✎ plan for today :) // 23-03-2023:
 #	: ̗̀➛ Python     -> CJV.22 - Check op je voortgang
-#	: ̗̀➛ Python     -> Verder werken aan python.
+#	: ̗̀➛ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen
 #	: ̗̀➛ Python     -> Ijs salon verbeteren.
 
 #	: ̗̀➛ JavaScript     -> M02.O1 - Buttons 1.0
@@ -9,7 +9,8 @@
 
 # ✔ What i did:
 #	༊*·˚ Python     -> Ijs salon verbeteert.
-#	༊*·˚ Python     ->  CJV.22 gekregen.
+#	༊*·˚ Python     -> CJV.22 gekregen.
+#	༊*·˚ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (code gemaakt)
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
