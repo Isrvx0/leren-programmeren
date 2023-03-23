@@ -34,7 +34,6 @@ while extra_bestellen:
     if meer_bestellen.lower() in ( "stop" , "nee"):
         extra_bestellen = False
 
-
 print("Bedankt en tot ziens! ")
                         
 # bonnetje printen : 
