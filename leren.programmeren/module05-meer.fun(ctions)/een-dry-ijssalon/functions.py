@@ -1,3 +1,6 @@
+BTW_PERC = 6
+OPTION_ERORR = 'Sorry dat is geen optie die we aanbieden...'
+
 def welcome_message():
     welkom_message = "Welkom bij Papi Gelato\n"
     return welkom_message
@@ -9,7 +12,7 @@ def particulier_or_zakelijk():
         if soort_klant.lower() in ('1','2'):
             choice_maken = False
         else:
-            print("Sorry dat is geen optie die we aanbieden...")
+            print(OPTION_ERORR)
     return soort_klant
 
 def hoeveelheid_vragen(soort_klant):
@@ -28,7 +31,7 @@ def hoeveelheid_vragen(soort_klant):
                 hoeveelheid_vragen = False
 
         except ValueError:
-            print('Sorry dat is geen optie die we aanbieden...' )
+            print(OPTION_ERORR)
     
     return hoeveelheid
 
@@ -47,7 +50,7 @@ def smaak_kiezen(aantal , soort_klant):
             teller += 1
             smaken_lijst.append(smaak.lower()) 
         else:
-            print("Sorry dat is geen optie die we aanbieden...")
+            print(OPTION_ERORR)
         if teller == aantal:
             choice= False
 
@@ -65,7 +68,7 @@ def keuze_maken(aantal , soort_klant):
                     print(f"Dan krijgt u van mij een {keuze} met {aantal} bolletjes\n")
                     choice = False
                 else:
-                    print('Sorry dat is geen optie die we aanbieden...' )
+                    print(OPTION_ERORR)
             elif aantal >= 4 and aantal <= 8:
                 print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes\n")
                 keuze = "bakje"
@@ -83,7 +86,7 @@ def topping_kiezen(soort_klant):
             if choice.lower() in ("a","b","c","d"):
                 topping = False
             else:
-                print("Sorry dat is geen optie die we aanbieden...")
+                print(OPTION_ERORR)
         elif soort_klant == "2":
             choice = "a"
             topping = False
@@ -158,6 +161,6 @@ def bonnetje(smaken_lijst,topping_price,soort_klant):
     bon.append(f"Totaal   {space*10}={space*29} €{round(totaal_prijs,2)}")
     
     if soort_klant == '2':
-        bon.append(F"BTW (6%) ={space*10}€{round(totaal_prijs / 100 * 106 , 2)}")
+        bon.append(F"BTW ({BTW_PERC}%) ={space*10}€{round(totaal_prijs / 100 * {BTW_PERC + 100} , 2)}")
     
     return bon
