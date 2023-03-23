@@ -2,6 +2,12 @@ def welcome_message():
     welkom_message = "Welkom bij Papi Gelato\n"
     return welkom_message
 
+def particulier_or_zakelijk():
+    choice_maken = True
+    while choice_maken:
+        soort_klant = input(" Bent u 1) een particuliere klant of 2) een zakelijke klant?  ")
+        if soort_klant.lower() in ('1','2'):
+            choice_maken = False
 
 def hoeveelheid_vragen():
     aantal_kiezen = True
