@@ -1,13 +1,15 @@
 # ✎ plan for today :) // 23-03-2023:
 #	: ̗̀➛ Python     -> CJV.22 - Check op je voortgang
 #	: ̗̀➛ Python     -> Verder werken aan python.
+#	: ̗̀➛ Python     -> Ijs salon verbeteren.
 
 #	: ̗̀➛ JavaScript     -> M02.O1 - Buttons 1.0
 
 #	: ̗̀➛ HTML     -> MP.O5 - "Live" zetten
 
 # ✔ What i did:
-#	༊*·˚
+#	༊*·˚ Python     -> Ijs salon verbeteert.
+#	༊*·˚ Python     ->  CJV.22 gekregen.
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
