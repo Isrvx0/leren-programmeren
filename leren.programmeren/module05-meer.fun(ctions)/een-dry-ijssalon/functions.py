@@ -111,14 +111,14 @@ def buy_more(soort_klant):
     return extra 
 
 
-def bonnetje(smaken_lijst,hoorntjes,bakjes,topping_price,soort_klant):
+def bonnetje(smaken_lijst,topping_price,soort_klant):
     totaal_prijs = 0
     winkel_elements = [
              { 'name' : 'aardbei', 'amount' : 0, 'price' : 0.95},
              { 'name' : 'chocolade', 'amount' : 0, 'price' : 0.95},
              { 'name' : 'vanille', 'amount' : 0, 'price' : 0.95},
-             { 'name' : 'hoorntjes', 'amount' : hoorntjes, 'price' : 1.25 },
-             { 'name' : 'bakjes', 'amount' : bakjes, 'price' : 0.75}]
+             { 'name' : 'hoorntje', 'amount' : 0, 'price' : 1.25 },
+             { 'name' : 'bakje', 'amount' : 0, 'price' : 0.75}]
     
     bon = []
     lijst = []
@@ -131,6 +131,7 @@ def bonnetje(smaken_lijst,hoorntjes,bakjes,topping_price,soort_klant):
     
     # Voegen van elements die als amount > 0 hebben:
     for element in winkel_elements:
+        print
         if element['amount'] > 0:
             lijst.append(element) 
     

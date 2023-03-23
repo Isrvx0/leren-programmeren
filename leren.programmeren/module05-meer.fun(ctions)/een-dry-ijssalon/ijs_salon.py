@@ -3,8 +3,6 @@ from functions import *
 print(welcome_message())
 
 # variable :
-bakjes = 0
-hoorntjes = 0
 topping_price = 0
 
 smaken_lijst = []
@@ -17,14 +15,9 @@ while extra_bestellen:
     
     # kiezen tussen hoorntje or bakje :
     keuze = keuze_maken(hoeveelheid ,soort_klant)
-    if keuze == "hoorntje":
-        hoorntjes += 1
-    elif keuze == "bakje":
-        bakjes += 1
-
+    smaken_lijst.append(keuze)
     # kiezen van smaak :
     smaken_lijst += smaak_kiezen(hoeveelheid , soort_klant)
-
     # kiezen van topping :
     topping = topping_kiezen(soort_klant)
     topping_price += topping_prijs(topping,hoeveelheid,keuze)
@@ -36,8 +29,12 @@ while extra_bestellen:
 
 print("Bedankt en tot ziens! ")
                         
-# bonnetje printen : 
-bon = bonnetje(smaken_lijst, hoorntjes, bakjes , topping_price , soort_klant)
+# bonnetje printen :
+
+
+print(smaken_lijst)
+ 
+bon = bonnetje(smaken_lijst,topping_price,soort_klant)
 print("--------------['Papi Gelato']--------------")
 for item in bon:
     print(item)
