@@ -5,30 +5,42 @@ def welcome_message():
 def particulier_or_zakelijk():
     choice_maken = True
     while choice_maken:
-        soort_klant = input(" Bent u 1) een particuliere klant of 2) een zakelijke klant?  ")
+        soort_klant = input("Bent u 1) een particuliere klant of 2) een zakelijke klant?  ")
         if soort_klant.lower() in ('1','2'):
             choice_maken = False
+    return soort_klant
 
-def hoeveelheid_vragen():
-    aantal_kiezen = True
-    while aantal_kiezen:
+def hoeveelheid_vragen(soort_klant):
+    hoeveelheid_vragen = True
+    while hoeveelheid_vragen:
         try:
-            aantal_bolletjes = int(input("Hoeveel bolletjes wilt u?  "))
-            if aantal_bolletjes > 8:
-                print("Sorry, zulke grote bakken hebben we niet")
-            elif aantal_bolletjes <= 8:
-                aantal_kiezen = False
+            if soort_klant == "1":
+                hoeveelheid = int(input("Hoeveel bolletjes wilt u?  "))
+                if hoeveelheid > 8:
+                    print("Sorry, zulke grote bakken hebben we niet")
+                elif hoeveelheid <= 8:
+                    hoeveelheid_vragen = False
+            
+            elif soort_klant == "2":
+                hoeveelheid = int(input("Hoeveel liter wilt u?  "))
+                hoeveelheid_vragen = False
+
         except ValueError:
             print('Sorry dat snap ik niet!' )
-    return aantal_bolletjes
+    
+    return hoeveelheid
 
-def smaak_kiezen(aantal):
+def smaak_kiezen(aantal , soort_klant):
     choice = True
     teller = 0
     smaken_lijst = []
     
+    hoveelheid = "bolletjes"
+    if soort_klant == '2':
+        hoveelheid = "liter"
+    
     while choice:
-        smaak = input( f"Welke smaak wilt u voor bolletje nummer {teller+1}?\nA) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
+        smaak = input( f"Welke smaak wilt u voor {hoveelheid} {teller+1}?\nA) Aardbei, C) Chocolade, M) Munt of V) Vanille? ")
         if smaak.lower() in ("aardbei","chocolade","munt","vanille"):
             teller += 1
             smaken_lijst.append(smaak.lower()) 
@@ -39,30 +51,40 @@ def smaak_kiezen(aantal):
 
     return smaken_lijst
 
-def keuze_maken(aantal):
+def keuze_maken(aantal , soort_klant):
     choice = True
+    keuze = " "
+    
     while choice:
-        if aantal <= 3:
-            keuze = input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
-            if  keuze.lower() in ("hoorntje" , "bakje"):
-                print(f"Dan krijgt u van mij een {keuze} met {aantal} bolletjes\n")
+        if soort_klant == "1":
+            if aantal <= 3:
+                keuze = input(f'Wilt u deze {aantal} bolletjes in een hoorntje of een bakje?  ')
+                if  keuze.lower() in ("hoorntje" , "bakje"):
+                    print(f"Dan krijgt u van mij een {keuze} met {aantal} bolletjes\n")
+                    choice = False
+                else:
+                    print('Sorry dat snap ik niet!' )
+            elif aantal >= 4 and aantal <= 8:
+                print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes\n")
+                keuze = "bakje"
                 choice = False
-            else:
-                print('Sorry dat snap ik niet!' )
-        elif aantal >= 4 and aantal <= 8:
-            print(f"Dan krijgt u van mij een bakje met {aantal} bolletjes\n")
-            keuze = "bakje"
+        elif soort_klant == "2":
             choice = False
     return keuze
 
-def topping_kiezen():
+def topping_kiezen(soort_klant):
     topping = True
+
     while topping:
-        choice = input("Wat voor topping wilt u: \nA) Geen, B) Slagroom, C) Sprinkels of D) Caramel Saus? ")
-        if choice.lower() in ("a","b","c","d"):
+        if soort_klant == "1":
+            choice = input("Wat voor topping wilt u: \nA) Geen, B) Slagroom, C) Sprinkels of D) Caramel Saus? ")
+            if choice.lower() in ("a","b","c","d"):
+                topping = False
+            else:
+                print("sorry dat snap ik niet")
+        elif soort_klant == "2":
+            choice = "a"
             topping = False
-        else:
-            print("sorry dat snap ik niet")
     return choice.lower()
 
 def topping_prijs(gekozen_topping , bolletjes , hoorntje_bakje):
@@ -79,12 +101,15 @@ def topping_prijs(gekozen_topping , bolletjes , hoorntje_bakje):
             price = 0.60
     return round(price,2)
 
-def buy_more():
-    extra = input('Wilt u nog meer bestellen?  ')
+def buy_more(soort_klant):
+    if soort_klant == "1":
+        extra = input('Wilt u nog meer bestellen?  ')
+    elif soort_klant == "2":
+        extra = "stop"
     return extra 
 
 
-def bonnetje(smaken_lijst,hoorntjes,bakjes,topping_price):
+def bonnetje(smaken_lijst,hoorntjes,bakjes,topping_price,soort_klant):
     totaal_prijs = 0
     winkel_elements = [{ 'name' : 'aardbei', 'amount' : 0, 'price' : 1.10},
              { 'name' : 'chocolade', 'amount' : 0, 'price' : 1.10},
@@ -92,7 +117,7 @@ def bonnetje(smaken_lijst,hoorntjes,bakjes,topping_price):
              { 'name' : 'munt', 'amount' : 0, 'price' : 1.10 },
              { 'name' : 'hoorntjes', 'amount' : hoorntjes, 'price' : 1.25 },
              { 'name' : 'bakjes', 'amount' : bakjes, 'price' : 0.75}]
-
+    
     bon = []
     lijst = []
     
@@ -111,16 +136,27 @@ def bonnetje(smaken_lijst,hoorntjes,bakjes,topping_price):
     
     #prijs bereken :
     for item in lijst:
-        price = item["amount"] * item["price"] 
+        item_price = item["price"]
+        
+        if soort_klant == '2':
+            price = item["amount"] * 9.80
+            item_price = 9.80
+        elif soort_klant == '1':
+            price = item["amount"] * item_price 
+        
         totaal_prijs += price
-        bon.append(f'{item["name"]}{space*10}:{space*10}{item["amount"]} X {item["price"]}{space*10}= {price}')
+        bon.append(f'{item["name"]}{space*10}:{space*10}{item["amount"]} X {item_price}{space*10}= {price}')
 
     # checken als topping worden gekozen :
     if topping_price > 0:
         bon.append(f'topping {space*10}: {space*30}= €{round(topping_price ,2)}')
-
-        totaal_prijs += topping_price
-    bon.append(f"totaal ={space*10}€{round(totaal_prijs,2)}")
+    
+    totaal_prijs += topping_price
+    bon.append(f"Totaal   ={space*10}€{round(totaal_prijs,2)}")
+    
+    if soort_klant == '2':
+        bon.append(F"BTW (9%) ={space*10}€2.43")
+    
     return bon
 
 
