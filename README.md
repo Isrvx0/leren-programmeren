@@ -4,18 +4,20 @@
 #	: ̗̀➛ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (code)
 #	: ̗̀➛ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (flowchart)
 #	: ̗̀➛ Python     -> M05.PA.O9 - Een paar kleine aanpassingen
-
-
+#	: ̗̀➛ Python     -> M05.PA.O10 - Een code- en commits review
+#	: ̗̀➛ Python     -> M05.PA - Opleveren
 #	: ̗̀➛ JavaScript     -> M02.O1 - Buttons 1.0
-
 #	: ̗̀➛ HTML     -> MP.O5 - "Live" zetten
 
 # ✔ What i did:
 #	༊*·˚ Python     -> Ijs salon verbeteert.
 #	༊*·˚ Python     -> CJV.22 gekregen.
 #	༊*·˚ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (code gemaakt)
-#	: ̗̀➛ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (flowchart gemaakt)
-#	: ̗̀➛ Python     -> M05.PA.O9 - Een paar kleine aanpassingen
+#	༊*·˚ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (flowchart gemaakt)
+#	༊*·˚ Python     -> M05.PA.O9 - Een paar kleine aanpassingen
+#	༊*·˚ Python     -> M05.PA.O10 - Een code- en commits review
+#	༊*·˚ Python     -> M05.PA - Opleveren
+
 
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
