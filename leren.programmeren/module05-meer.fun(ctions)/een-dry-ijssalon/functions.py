@@ -111,12 +111,13 @@ def buy_more(soort_klant):
 
 def bonnetje(smaken_lijst,hoorntjes,bakjes,topping_price,soort_klant):
     totaal_prijs = 0
-    winkel_elements = [{ 'name' : 'aardbei', 'amount' : 0, 'price' : 1.10},
+    winkel_elements = [
+             { 'name' : 'aardbei  ', 'amount' : 0, 'price' : 1.10},
              { 'name' : 'chocolade', 'amount' : 0, 'price' : 1.10},
-             { 'name' : 'vanille', 'amount' : 0, 'price' : 1.10 },
-             { 'name' : 'munt', 'amount' : 0, 'price' : 1.10 },
+             { 'name' : 'vanille  ', 'amount' : 0, 'price' : 1.10 },
+             { 'name' : 'munt     ', 'amount' : 0, 'price' : 1.10 },
              { 'name' : 'hoorntjes', 'amount' : hoorntjes, 'price' : 1.25 },
-             { 'name' : 'bakjes', 'amount' : bakjes, 'price' : 0.75}]
+             { 'name' : 'bakjes   ', 'amount' : bakjes, 'price' : 0.75}]
     
     bon = []
     lijst = []
