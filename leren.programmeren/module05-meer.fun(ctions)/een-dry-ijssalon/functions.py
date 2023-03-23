@@ -112,12 +112,12 @@ def buy_more(soort_klant):
 def bonnetje(smaken_lijst,hoorntjes,bakjes,topping_price,soort_klant):
     totaal_prijs = 0
     winkel_elements = [
-             { 'name' : 'aardbei  ', 'amount' : 0, 'price' : 1.10},
+             { 'name' : 'aardbei', 'amount' : 0, 'price' : 1.10},
              { 'name' : 'chocolade', 'amount' : 0, 'price' : 1.10},
-             { 'name' : 'vanille  ', 'amount' : 0, 'price' : 1.10 },
-             { 'name' : 'munt     ', 'amount' : 0, 'price' : 1.10 },
+             { 'name' : 'vanille', 'amount' : 0, 'price' : 1.10 },
+             { 'name' : 'munt', 'amount' : 0, 'price' : 1.10 },
              { 'name' : 'hoorntjes', 'amount' : hoorntjes, 'price' : 1.25 },
-             { 'name' : 'bakjes   ', 'amount' : bakjes, 'price' : 0.75}]
+             { 'name' : 'bakjes', 'amount' : bakjes, 'price' : 0.75}]
     
     bon = []
     lijst = []
@@ -146,14 +146,14 @@ def bonnetje(smaken_lijst,hoorntjes,bakjes,topping_price,soort_klant):
             price = item["amount"] * item_price 
         
         totaal_prijs += price
-        bon.append(f'{item["name"]}{space*10}:{space*10}{item["amount"]} X {item_price}{space*10}= {price}')
+        bon.append(f'{item["name"]}{space*10}:{space*10}{item["amount"]} X {item_price}{space*10}= €{price}')
 
     # checken als topping worden gekozen :
     if topping_price > 0:
-        bon.append(f'topping {space*10}: {space*30}= €{round(topping_price ,2)}')
+        bon.append(f'topping  {space*10}:{space*29} €{round(topping_price ,2)}')
     
     totaal_prijs += topping_price
-    bon.append(f"Totaal   ={space*10}€{round(totaal_prijs,2)}")
+    bon.append(f"Totaal   {space*10}={space*29} €{round(totaal_prijs,2)}")
     
     if soort_klant == '2':
         bon.append(F"BTW (9%) ={space*10}€2.43")
