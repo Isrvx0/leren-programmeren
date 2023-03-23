@@ -4,10 +4,14 @@ def welcome_message():
 
 
 def hoeveelheid_vragen():
-    aantal_bolletjes = " " 
-    while type(aantal_bolletjes) != int:
+    aantal_kiezen = True
+    while aantal_kiezen:
         try:
             aantal_bolletjes = int(input("Hoeveel bolletjes wilt u?  "))
+            if aantal_bolletjes > 8:
+                print("Sorry, zulke grote bakken hebben we niet")
+            elif aantal_bolletjes <= 8:
+                aantal_kiezen = False
         except ValueError:
             print('Sorry dat snap ik niet!' )
     return aantal_bolletjes
