@@ -11,7 +11,7 @@ smaken_lijst = []
 
 extra_bestellen = True
 while extra_bestellen:
-    # kiezen hoeveel bolletjes :
+    # kiezen van de hoeveelheid :
     soort_klant = particulier_or_zakelijk()
     hoeveelheid = hoeveelheid_vragen(soort_klant)
     
@@ -22,7 +22,7 @@ while extra_bestellen:
     elif keuze == "bakje":
         bakjes += 1
 
-    # kiezen van een smaak :
+    # kiezen van smaak :
     smaken_lijst += smaak_kiezen(hoeveelheid , soort_klant)
 
     # kiezen van topping :
