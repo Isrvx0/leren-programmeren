@@ -3,6 +3,8 @@
 #	: ̗̀➛ Python     -> Ijs salon verbeteren.
 #	: ̗̀➛ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (code)
 #	: ̗̀➛ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (flowchart)
+#	: ̗̀➛ Python     -> M05.PA.O9 - Een paar kleine aanpassingen
+
 
 #	: ̗̀➛ JavaScript     -> M02.O1 - Buttons 1.0
 
