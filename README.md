@@ -15,6 +15,7 @@
 #	༊*·˚ Python     -> CJV.22 gekregen.
 #	༊*·˚ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (code gemaakt)
 #	: ̗̀➛ Python     -> M05.PA.O8 - Feature #04 - De zakelijke markt bedienen (flowchart gemaakt)
+#	: ̗̀➛ Python     -> M05.PA.O9 - Een paar kleine aanpassingen
 
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
