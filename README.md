@@ -1,3 +1,16 @@
+# ✎ plan for today :) // 23-03-2023:
+#	: ̗̀➛ Python     -> CJV.22 - Check op je voortgang
+#	: ̗̀➛ Python     -> Verder werken aan python.
+
+#	: ̗̀➛ JavaScript     -> M02.O1 - Buttons 1.0
+
+#	: ̗̀➛ HTML     -> MP.O5 - "Live" zetten
+
+# ✔ What i did:
+#	༊*·˚
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
+
 # ✎ plan for today :) // 19-03-2023:
 #	: ̗̀➛ Python     -> M05.PA.O6 - Feature #03 - Toppings // code aanpasen
 #	: ̗̀➛ Python     -> M05.PA.O6 - Feature #03 - Toppings // update flowchart
