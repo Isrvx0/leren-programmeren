@@ -1,5 +1,5 @@
 # ✎ plan for today :) // 24-03-2023:
-#	: ̗̀➛ JavaScript -> M02.O1 - Buttons 1.0 + M02.O2.
+#	: ̗̀➛ ik ga de les gebuiken om php te instelleren en leren over php
 
 # ✔ What i did:
 
