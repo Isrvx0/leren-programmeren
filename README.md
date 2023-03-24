@@ -1,3 +1,9 @@
+# ✎ plan for today :) // 24-03-2023:
+#	: ̗̀➛ JavaScript -> M02.O1 - Buttons 1.0 + M02.O2.
+
+# ✔ What i did:
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 # ✎ plan for today :) // 23-03-2023:
 #	: ̗̀➛ Python     -> CJV.22 - Check op je voortgang
 #	: ̗̀➛ Python     -> Ijs salon verbeteren.
@@ -17,8 +23,6 @@
 #	༊*·˚ Python     -> M05.PA.O9 - Een paar kleine aanpassingen
 #	༊*·˚ Python     -> M05.PA.O10 - Een code- en commits review
 #	༊*·˚ Python     -> M05.PA - Opleveren
-
-
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
