@@ -1,7 +1,17 @@
-# ✎ plan for today :) // 24-03-2023:
-#	: ̗̀➛ ik ga de les gebuiken om php te instelleren en leren over php
+# ✎ plan for today :) // 25-03-2023:
+#	: ̗̀➛ PHP      -> meer info zoeken over php
+#	: ̗̀➛ HTML     -> MP.O5 - "Live" zetten
 
 # ✔ What i did:
+#	༊*·˚ PHP       -> Extra kennis gemaakt met php. en beetje geoefend.
+#	༊*·˚ HTML      -> my web live gezet
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
+# ✎ plan for today :) // 24-03-2023:
+#	: ̗̀➛ php      -> ik ga de les gebuiken om php te instelleren en leren over php
+
+# ✔ What i did:
+#	༊*·˚ php      -> kennis gemaakt met php.
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 # ✎ plan for today :) // 23-03-2023:
@@ -12,7 +22,7 @@
 #	: ̗̀➛ Python     -> M05.PA.O9 - Een paar kleine aanpassingen
 #	: ̗̀➛ Python     -> M05.PA.O10 - Een code- en commits review
 #	: ̗̀➛ Python     -> M05.PA - Opleveren
-#	: ̗̀➛ JavaScript     -> M02.O1 - Buttons 1.0
+#	: ̗̀➛ JavaScript -> M02.O1 - Buttons 1.0
 #	: ̗̀➛ HTML     -> MP.O5 - "Live" zetten
 
 # ✔ What i did:
