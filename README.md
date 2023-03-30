@@ -1,4 +1,4 @@
-# ✎ plan for next week :) // 4-03-2023 t/m 7-03-2023 :
+# ✎ plan for next week :) // 4-04-2023 t/m 7-04-2023 :
 #	: ̗̀➛ Back End   -> meer info zoeken over php.
 #	: ̗̀➛ Back End   -> Introductie + Forms.
 
@@ -11,6 +11,17 @@
 
 # ✔ What i did:
 #	༊*·˚ 
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
+
+# ✎ plan for today :) 30-03-2023 :
+#	: ̗̀➛ Python     -> Beginnen met de meesterproef.
+#	: ̗̀➛ PHP        -> Uitleg en infromatie zoeken
+#	: ̗̀➛ PHP        -> Challenge af maken
+
+# ✔ What i did:
+#	༊*·˚ PHP        -> Challenge af gemaakt.
+#	༊*·˚ PHP        -> Uitleg en infromatie gezocht.
 
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
