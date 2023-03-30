@@ -45,3 +45,49 @@ button.addEventListener ("click", function(){
       element.innerHTML = "Welkom";
     }
   });
+
+
+
+
+
+
+
+// // docent uitleg :
+
+
+// // button ='
+// function clicked(event){
+//   let btn = event.target;
+//   btn.aantal_clicks ++;
+//   if (btn.aantal_clicks == 1){
+//     let h1 = document.querySelector(h1)
+//     // or let h1 = document.getElementById("id name")
+//     h1.innerText = 'Welkom Israa';
+//     console.log('clicked')
+//   } else {
+//     btn.classList.add('hidden');
+//     btn.style.display = 'none';
+//   }
+  
+// }
+
+// var btn = document.createElement("button");
+// document.body.append(btn);
+// btn.innerText = 'knop 1';
+// btn.onclick = clicked;
+// btn.aantal_clicks = 0;
+
+// // button style (style css)=
+//   button {
+//     background-color = blue;
+//     height = 100px;
+//     width = 100p;
+//   }
+//   button:hover {
+//     background-color = red;
+//     color = white;
+//     text-decoration = underline;
+//   }
+//   btn.hidden{
+//     display = none;
+//   }
