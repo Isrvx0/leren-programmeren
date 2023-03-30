@@ -1,3 +1,21 @@
+# ✎ plan for next week :) // 4-03-2023 t/m 7-03-2023 :
+#	: ̗̀➛ Back End   -> meer info zoeken over php.
+#	: ̗̀➛ Back End   -> Introductie + Forms.
+
+#	: ̗̀➛ Python     -> Werken aan de meesterproef
+
+#	: ̗̀➛ JavaScript -> meer info zoeken over JavaScript.
+#	: ̗̀➛ JavaScript -> Buttons + verder werken aan de andere opdrachten. 
+
+#	: ̗̀➛ Dev-Skills -> function maken voor de game. (ong 5 function).
+
+# ✔ What i did:
+#	༊*·˚ 
+
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
+
+
 # ✎ plan for today :) // 25-03-2023:
 #	: ̗̀➛ PHP      -> meer info zoeken over php
 #	: ̗̀➛ HTML     -> MP.O5 - "Live" zetten
