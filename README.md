@@ -1,11 +1,11 @@
 # ✎ plan for today :) // 12-04-2023:
-#	: ̗̀➛ Python        -> ckv 23.
+#	: ̗̀➛ Python        -> ckv 24.
 #	: ̗̀➛ opleiding     -> stage plekken vinden
 
 
 # ✔ What i did:
 #	༊*·˚  opleiding     -> stage plekken gevonden (gesolliciteerd bij 9 bedrijven)
-#	༊*·˚ 
+#	༊*·˚ Python        -> ckv 24 niet gehad omdat er geen genoeg tijd was .
 
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
