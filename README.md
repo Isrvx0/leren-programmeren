@@ -10,7 +10,12 @@
 #	: ̗̀➛ Dev-Skills -> function maken voor de game. (ong 5 function).
 
 # ✔ What i did:
-#	༊*·˚ 
+#	༊*·˚ Dev-Skills -> function maken voor de game. (ong 5 function).
+#	༊*·˚ JavaScript -> Buttons + informatie gezocht.
+#	༊*·˚ Python     -> gewerkt aan de meesterproef.
+#	༊*·˚ Back End   -> Introductie 
+#	༊*·˚ Back End   -> info en uitleg gezocht over php. 
+
 
 # ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 
