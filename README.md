@@ -4,6 +4,7 @@
 
 
 # ✔ What i did:
+#	༊*·˚  opleiding     -> stage plekken gevonden (gesolliciteerd bij 9 bedrijven)
 #	༊*·˚ 
 
 
