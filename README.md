@@ -1,3 +1,13 @@
+# ✎ plan for today :) // 12-04-2023:
+#	: ̗̀➛ Python        -> ckv 23.
+#	: ̗̀➛ opleiding     -> stage plekken vinden
+
+
+# ✔ What i did:
+#	༊*·˚ 
+
+
+# ༶•┈┈┈┈┈┈┈┈┈┈┈୨♡ GOOD LUCK ♡୧┈┈┈┈┈┈┈┈┈┈┈•༶
 # ✎ plan for next week :) // 4-04-2023 t/m 7-04-2023 :
 #	: ̗̀➛ Back End   -> meer info zoeken over php.
 #	: ̗̀➛ Back End   -> Introductie + Forms.
