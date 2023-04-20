@@ -61,21 +61,24 @@ def getNumberOfWords(text: str) -> int:
     return numberOfWords
 
 # opdracht 5
-def aviScore(string: str)  -> int:
-    aantal_woorden = getNumberOfWords(string)
+def aviScore(text: str)  -> int:
+    aantal_woorden = getNumberOfWords(text)
+    aantal_zinnen = getNumberOfSentences(text)
+    gemiddeld = abs(aantal_woorden / aantal_zinnen)
+    
     avi_score = 0
     
-    if aantal_woorden <= 7:
+    if gemiddeld <= 7:
         avi_score = 5
-    elif aantal_woorden == 8:
+    elif gemiddeld == 8:
         avi_score = 6
-    elif aantal_woorden == 9:
+    elif gemiddeld == 9:
         avi_score = 7
-    elif aantal_woorden == 10:
+    elif gemiddeld == 10:
         avi_score = 8
-    elif aantal_woorden == 11:
+    elif gemiddeld == 11:
         avi_score = 11
-    elif aantal_woorden > 11:
+    elif gemiddeld > 11:
         avi_score = 12
     
     return avi_score
