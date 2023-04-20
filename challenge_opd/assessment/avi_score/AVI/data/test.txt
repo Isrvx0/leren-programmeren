@@ -1,1 +1,6 @@
 Mijn test
+Opdracht 1:
+print(getNumberOfCharacters('Hello, Ik ben Israa eN IK hou VaN Programmeren'))
+
+Opdrcaht 2:
+print(getNumberOfSentences('Hello! Wie ben je? Volgens mij hoor je niet bij deze klas.'))

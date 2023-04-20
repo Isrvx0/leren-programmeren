@@ -7,8 +7,6 @@ else:
     print("Deze test is niet geslaagd")
 
 # schrijf zelf nog wat extra testen voor getNumberOfCharacters
-#       print(getNumberOfCharacters('Hello, Ik ben Israa eN IK hou VaN Programmeren'))
-
 
 # test 2: getNumberOfSentences
 if getNumberOfSentences(getText('easy')) == 14:
