@@ -42,7 +42,17 @@ def getNumberOfCharacters(text: str) -> int:
 # opdracht 2
 
 def getNumberOfSentences(text: str) -> int:
-    return 0 
+    aantal_zinnen = 0
+    testen = False
+    for sentence in text:
+        if sentence  in ['.','!','?']:
+           testen = True
+        else :
+            testen = False 
+        if testen:  # If testen is True -> betekent dat de letter gelijk is aan  '.','!' of'?'  en dus de zin is klaar. 
+            aantal_zinnen += 1
+    
+    return aantal_zinnen 
 
 
 # opdracht 3
